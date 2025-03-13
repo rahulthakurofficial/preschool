@@ -63,7 +63,7 @@ const Home = () => {
           <iframe
             src="https://www.google.com/maps/embed?pb=!4v1737903296373!6m8!1m7!1sCAoSLEFGMVFpcE5DVmN0ZVBudjJSWVc3ZTJKT285U0xhYWRNMlp0eE9wU0FIaDgt!2m2!1d12.89627456744329!2d77.58808555922155!3f80.01844357416653!4f2.1998036717126155!5f0.4000000000000002"
             width="100%"
-            height="300"
+            height="400"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"

@@ -225,6 +225,7 @@ li {
   background: -webkit-linear-gradient(#eee, rgb(69, 57, 248));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  
 }
 
 .logo h2 span {
@@ -371,4 +372,9 @@ li {
   }
 }
 
+@media (max-width: 1024px) {
+  .logo img {
+      width: 80px;
+  }
+}
 
