@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 .main-header {
@@ -19,6 +19,7 @@
   top: 0;
   left: 0;
   z-index: 1000;
+  margin-bottom: 20px;
 }
 
 .logo {
@@ -153,7 +154,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  // box-sizing: border-box;
   font-family: "Jost", sans-serif;
 }
 
@@ -174,8 +175,12 @@ li {
   height: 10rem;
   display: grid;
   grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  //   rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  margin-bottom: 20px;
+  
+
+  
 }
 
 .logo {
@@ -222,9 +227,9 @@ li {
   font-size: 2.5rem;
   font-weight: 400;
   text-transform: uppercase;
-  background: -webkit-linear-gradient(#eee, rgb(69, 57, 248));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  // background: -webkit-linear-gradient(#eee, rgb(69, 57, 248));
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
   
 }
 
@@ -305,8 +310,8 @@ li {
     padding-left: 3rem;
     transition: all 2s linear;
     transform-origin: top;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      // rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   }
 
   .mobile-menu-link ul {
