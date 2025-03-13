@@ -1,0 +1,195 @@
+// import React, { useState } from "react";
+// import { Link } from "react-router-dom";
+// import { FaSearch, FaMapMarkerAlt, FaGlobe, FaUser } from "react-icons/fa";
+// import { Dropdown, Menu } from "antd";
+// import letzstepinImg from "../../assets/let_image.png";
+// import "./Navbar.scss";
+
+// const Navbar = () => {
+//   const [selectedLanguage, setSelectedLanguage] = useState("English");
+
+//   const handleMenuClick = (e) => {
+//     setSelectedLanguage(e.key);
+//   };
+
+//   const languageMenu = (
+//     <Menu onClick={handleMenuClick}>
+//       <Menu.Item key="English">English</Menu.Item>
+//       <Menu.Item key="Hindi">Hindi</Menu.Item>
+//       <Menu.Item key="Punjabi">Kannada</Menu.Item>
+//     </Menu>
+//   );
+
+//   const userMenu = (
+//     <Menu>
+//       <Menu.Item key="profile">
+//         <Link to="/profile">Profile</Link>
+//       </Menu.Item>
+//       <Menu.Item key="assistant">
+//         <Link to="/assistant">My Assistant</Link>
+//       </Menu.Item>
+//       <Menu.Item key="shortlisted">
+//         <Link to="/shortlisted">Shortlisted Schools</Link>
+//       </Menu.Item>
+//       <Menu.Item key="applications">
+//         <Link to="/applications">Admission Applications</Link>
+//       </Menu.Item>
+//       <Menu.Divider />
+//       <Menu.Item key="logout">
+//         <Link to="/logout">Log Out</Link>
+//       </Menu.Item>
+//     </Menu>
+//   );
+
+//   return (
+//     <header className="main-header">
+//       <div className="logo">
+//         <img src={letzstepinImg} alt="Logo" className="logo-img" />
+//       </div>
+
+//       <div className="search-container">
+//         <input type="text" placeholder="Search..." className="search-input" />
+//         <button className="search-btn">
+//           <FaSearch className="search-icon" />
+//         </button>
+//       </div>
+
+//       <div className="gps-search-container">
+//         <input
+//           type="text"
+//           placeholder="Search location..."
+//           className="gps-search-input"
+//         />
+//         <button className="gps-search-btn">
+//           <FaMapMarkerAlt className="gps-icon" />
+//         </button>
+//       </div>
+
+//       <Dropdown
+//         overlay={languageMenu}
+//         trigger={["click"]}
+//         placement="bottomRight"
+//       >
+//         <div className="language-selector">
+//           <FaGlobe className="language-icon" />
+//           <span>{selectedLanguage}</span>
+//         </div>
+//       </Dropdown>
+
+//       <Dropdown overlay={userMenu} trigger={["click"]} placement="bottomRight">
+//         <div className="user-icon">
+//           <FaUser className="user-dropdown-icon" />
+//         </div>
+//       </Dropdown>
+//     </header>
+//   );
+// };
+
+// export default Navbar;
+
+import React, { useState } from "react";
+import "./Navbar.scss";
+import { FaSearch, FaMapMarkerAlt } from "react-icons/fa";
+import letzstepinImg from "../../assets/let_image.png";
+import { Menu, Dropdown } from "antd";
+import { FaGlobe, FaUser } from "react-icons/fa";
+
+
+import { GiHamburgerMenu } from "react-icons/gi";
+
+
+
+const Navbar = () => {
+  const [showMediaIcons, setShowMediaIcons] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState("English");
+
+  const handleMenuClick = (e) => {
+    setSelectedLanguage(e.key);
+  };
+
+  const languageMenu = (
+    <Menu onClick={handleMenuClick}>
+      <Menu.Item key="English">English</Menu.Item>
+      <Menu.Item key="Hindi">Hindi</Menu.Item>
+      <Menu.Item key="Punjabi">Kannada</Menu.Item>
+    </Menu>
+  );
+
+ 
+  return (
+    <>
+      <nav className="main-nav">
+        {/* 1st logo part  */}
+        <div className="logo">
+          <h2>
+            <div className="logo">
+              <img src={letzstepinImg} alt="Logo" className="logo-img" />
+            </div>
+          </h2>
+        </div>
+
+        {/* 2nd menu part  */}
+        <div
+          className={
+            showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
+          }
+        >
+          <ul>
+            <li>
+              <div className="search-container">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  className="search-input"
+                />
+                <button className="search-btn">
+                  <FaSearch className="search-icon" />
+                </button>
+              </div>
+            </li>
+            <li>
+              <div className="gps-search-container">
+                <input
+                  type="text"
+                  placeholder="Search location..."
+                  className="gps-search-input"
+                />
+                <button className="gps-search-btn">
+                  <FaMapMarkerAlt className="gps-icon" />
+                </button>
+              </div>
+            </li>
+            <li>
+              {/* <NavLink to="/contact">contact</NavLink> */}
+              <Dropdown
+                overlay={languageMenu}
+                trigger={["click"]}
+                placement="bottomRight"
+              >
+                <div className="language-selector">
+                  <FaGlobe className="language-icon" />
+                  <span>{selectedLanguage}</span>
+                </div>
+              </Dropdown>
+            </li>
+            <li>
+              
+            </li>
+          </ul>
+        </div>
+
+        {/* 3rd social media links */}
+        <div className="social-media">
+          {/* hamburget menu start  */}
+          <div className="hamburger-menu">
+            <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
+              <GiHamburgerMenu />
+            </a>
+          </div>
+        </div>
+      </nav>
+    </>
+  );
+};
+
+export default Navbar;
