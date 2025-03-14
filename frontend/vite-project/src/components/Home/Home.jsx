@@ -137,7 +137,8 @@ const Home = () => {
       </div>
       {/* Testimonials Section */}
       <div className="testimonials">
-        <h2>What Parents Say</h2>
+      <h2 class="parent-testimonials">What Parents Say</h2>
+
         <div className="testimonial-grid">
           {[
             {
