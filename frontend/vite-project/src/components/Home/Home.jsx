@@ -200,9 +200,7 @@ const Home = () => {
               { icon: FaSmile, text: "Play & Recreation" },
               { icon: FaHeart, text: "Emotional Support" },
               { icon: FaBook, text: "Learning Resources" },
-              // { icon: FaSmile, text: "Child Development" },
-              // { icon: FaUsersCog, text: "Teacher-Student Ratio" },
-              // { icon: FaUsers, text: "Student-Teacher Ratio", value: "1:10" },
+             
             ].map(({ icon: Icon, text }, index) => (
               <div key={index} className="rating-card">
                 <Icon className="icon" /> 5/5 <span>{text}</span>
