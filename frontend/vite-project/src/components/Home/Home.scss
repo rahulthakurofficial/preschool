@@ -299,6 +299,29 @@
       transform: translateY(0);
     }
   }
+
+  .buy-btn, .cart-btn {
+    background: cyan;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block;
+    width: 100px;
+    margin: 5px auto;
+    text-align: center;
+  }
+  
+  .buy-btn:hover {
+    background: #007bff;
+  }
+  
+  .cart-btn:hover {
+    background: #28a745;
+  }
+  
   
   /* Small devices (mobile phones) */
   @media (max-width: 576px) {

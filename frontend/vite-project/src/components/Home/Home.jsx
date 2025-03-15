@@ -78,31 +78,48 @@ const Home = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Preschool</td>
-                  <td>₹ 4,500</td>
-                  <td>₹ 4,000</td>
-                </tr>
-                <tr>
-                  <td>LKG</td>
-                  <td>₹ 5,000</td>
-                  <td>₹ 4,500</td>
-                </tr>
-                <tr>
-                  <td>UKG</td>
-                  <td>₹ 5,500</td>
-                  <td>₹ 5,000</td>
-                </tr>
-                <tr>
-                  <td>Class 1</td>
-                  <td>₹ 6,000</td>
-                  <td>₹ 5,500</td>
-                </tr>
-              </tbody>
+  <tr>
+    <td>Preschool</td>
+    <td>₹ 4,500</td>
+    <td>
+      ₹ 4,000 <br />
+      <button className="buy-btn">Buy Now</button>
+      <button className="cart-btn">Add to Cart</button>
+    </td>
+  </tr>
+  <tr>
+    <td>LKG</td>
+    <td>₹ 5,000</td>
+    <td>
+      ₹ 4,500 <br />
+      <button className="buy-btn">Buy Now</button>
+      <button className="cart-btn">Add to Cart</button>
+    </td>
+  </tr>
+  <tr>
+    <td>UKG</td>
+    <td>₹ 5,500</td>
+    <td>
+      ₹ 5,000 <br />
+      <button className="buy-btn">Buy Now</button>
+      <button className="cart-btn">Add to Cart</button>
+    </td>
+  </tr>
+  <tr>
+    <td>Class 1</td>
+    <td>₹ 6,000</td>
+    <td>
+      ₹ 5,500 <br />
+      <button className="buy-btn">Buy Now</button>
+      <button className="cart-btn">Add to Cart</button>
+    </td>
+  </tr>
+</tbody>
+
             </table>
             <div className="modal-actions">
-              <button className="buy-btn">Buy Now</button>
-              <button className="cart-btn">Add to Cart</button>
+              {/* <button className="buy-btn">Buy Now</button>
+              <button className="cart-btn">Add to Cart</button> */}
               <button
                 className="cart-btn"
                 onClick={() => setIsModalOpen(false)}
