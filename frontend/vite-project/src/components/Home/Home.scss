@@ -231,7 +231,7 @@
     z-index: 1000;
   
     .modal-content {
-      background: #fff;
+      background: black;
       padding: 20px;
       width: 90%;
       max-width: 500px;
@@ -242,7 +242,7 @@
   
       h2 {
         margin-bottom: 15px;
-        color: #333;
+        color: white;
       }
   
       table {
@@ -351,6 +351,10 @@
         }
       }
     }
+  }
+  
+  table, th, td {
+    border: 1px solid black;
   }
   
   /* Medium devices (laptops) */
