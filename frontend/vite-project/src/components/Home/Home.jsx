@@ -66,6 +66,9 @@ const Home = () => {
       {isModalOpen && (
   <div className="modal" style={{ color: "white", fontSize: "13px" }}>
     <div className="modal-content">
+      {/* Close Button */}
+      <button className="close-btn" onClick={() => setIsModalOpen(false)} style={{ marginLeft: "400px" }}>✖</button>
+      
       <h2>Fee Structure</h2>
       <table>
         <thead>
@@ -122,6 +125,7 @@ const Home = () => {
           </tr>
         </tbody>
       </table>
+
       <div className="modal-actions">
         <button className="cart-btn" onClick={() => setIsModalOpen(false)}>
           Close
