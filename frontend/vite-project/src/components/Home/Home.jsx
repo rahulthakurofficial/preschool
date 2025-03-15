@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useState } from "react";
 import "./Home.scss";
 import gigglezz from "/src/assets/gigglezz-logo.png";
 import {
@@ -25,9 +26,14 @@ import {
   FaQuoteLeft,
   FaUserCircle,
   FaUsers,
+  FaRupeeSign,
 } from "react-icons/fa";
+// const PreschoolCard = () => {
+//   const [isModalOpen, setIsModalOpen] = useState(false);
 
-const Home = () => {
+  const Home = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+  
   return (
     <div className="preschool-container">
       {/* Preschool Card */}
@@ -49,12 +55,60 @@ const Home = () => {
           <button className="call-btn">
             <FaPhoneAlt className="icon" /> Book Now
           </button>
+          <button className="call-btn" onClick={() => setIsModalOpen(true)}>
+          <FaRupeeSign className="icon" /> View Fee Structure
+        </button>
         </div>
         <div className="icons">
           <FaHeart className="heart-icon" />
           <FaShareAlt className="share-icon" />
         </div>
       </div>
+      
+     {/* Modal for Fee Structure */}
+     {isModalOpen && (
+  <div className="modal">
+    <div className="modal-content">
+      <h2>Fee Structure</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Admission Fee (₹)</th>
+            <th>Discounted Fee (₹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Preschool</td>
+            <td>₹ 4,500</td>
+            <td>₹ 4,000</td> {/* Added Discounted Fee */}
+          </tr>
+          <tr>
+            <td>LKG</td>
+            <td>₹ 5,000</td>
+            <td>₹ 4,500</td> {/* Added Discounted Fee */}
+          </tr>
+          <tr>
+            <td>UKG</td>
+            <td>₹ 5,500</td>
+            <td>₹ 5,000</td> {/* Added Discounted Fee */}
+          </tr>
+          <tr>
+            <td>Class 1</td>
+            <td>₹ 6,000</td>
+            <td>₹ 5,500</td> {/* Added Discounted Fee */}
+          </tr>
+        </tbody>
+      </table>
+      <div className="modal-actions">
+        <button className="buy-btn">Buy Now</button>
+        <button className="cart-btn">Add to Cart</button>
+        <button className="cart-btn" onClick={() => setIsModalOpen(false)}>Close</button>
+      </div>
+    </div>
+  </div>
+)}
 
       {/* Google Maps */}
 
@@ -171,7 +225,7 @@ const Home = () => {
       </div>
     </div>
 
-    // </div>
+   
   );
 };
 

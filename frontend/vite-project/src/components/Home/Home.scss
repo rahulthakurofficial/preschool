@@ -218,6 +218,89 @@
     }
   }
 
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  
+    .modal-content {
+      background: #fff;
+      padding: 20px;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: fadeIn 0.3s ease-in-out;
+  
+      h2 {
+        margin-bottom: 15px;
+        color: #333;
+      }
+  
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+  
+        th, td {
+          border: 2px solid #ddd;
+          padding: 10px;
+          text-align: center;
+        }
+  
+        th {
+          background: black;
+          font-weight: bold;
+        }
+      }
+  
+      .modal-actions {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 15px;
+  
+        .buy-btn,
+        .cart-btn {
+          background: cyan;
+          color: white;
+          border: none;
+          padding: 10px 15px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background 0.3s ease;
+          margin-left: 81px;
+  
+          // &:hover {
+          //   background: #0056b3;
+          // }
+        }
+      }
+  
+      
+    }
+  }
+  
+ 
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
   /* Base Styles */
   .container {
     display: flex;

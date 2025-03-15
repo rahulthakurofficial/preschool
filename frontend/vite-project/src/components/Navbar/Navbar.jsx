@@ -4,6 +4,8 @@ import { FaSearch, FaMapMarkerAlt } from "react-icons/fa";
 import letzstepinImg from "../../assets/let_image.png";
 import { Menu, Dropdown } from "antd";
 import { FaGlobe, FaUser } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
+
 
 
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -70,6 +72,11 @@ const Navbar = () => {
                 </button>
               </div>
             </li>
+            {/* <li>
+              Register School
+            </li> */}
+          {/* <li style={{ fontSize: "25px" }}>Blog</li> */}
+
             <li>
               {/* <NavLink to="/contact">contact</NavLink> */}
               <Dropdown
@@ -84,8 +91,9 @@ const Navbar = () => {
               </Dropdown>
             </li>
             <li>
-              
+               <FaShoppingCart className="cart-icon" size={50}/>
             </li>
+
           </ul>
         </div>
 
