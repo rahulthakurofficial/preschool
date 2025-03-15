@@ -80,8 +80,8 @@ const Home = () => {
               { icon: FaBus, text: "School Transport" },
               { icon: FaMusic, text: "Music & Dance Room" },
               { icon: FaUtensils, text: "Healthy Snack & Dining Area" },
-              // {icon: FaPaintBrush, text: "Art & Craft Zone"},
-              // {icon: FaSwimmer, text: "Swimming Pool"},
+              { icon: FaPaintBrush, text: "Art & Craft Zone" },
+              { icon: FaSwimmer, text: "Swimming Pool" },
               { icon: FaSeedling, text: "Gardening Activities" },
             ].map(({ icon: Icon, text }, index) => (
               <div key={index} className="amenity-card">
@@ -104,7 +104,6 @@ const Home = () => {
               { icon: FaChild, text: "Minimum Age", value: "02 Year(s)" },
               { icon: FaChild, text: "Maximum Age", value: "06 Year(s)" },
               { icon: FaUtensils, text: "Meals Provided", value: "Yes" },
-
             ].map(({ icon: Icon, text, value }, index) => (
               <div key={index} className="info-card">
                 <Icon className="icon" /> {text} <span>{value}</span>
@@ -126,7 +125,6 @@ const Home = () => {
               { icon: FaShieldAlt, text: "Safety" },
               { icon: FaVideo, text: "Hygiene" },
               { icon: FaUsers, text: "Student-Teacher Ratio", value: "1:10" },
-
             ].map(({ icon: Icon, text }, index) => (
               <div key={index} className="rating-card">
                 <Icon className="icon" /> 5/5 <span>{text}</span>
@@ -137,7 +135,7 @@ const Home = () => {
       </div>
       {/* Testimonials Section */}
       <div className="testimonials">
-      <h2 class="parent-testimonials">What Parents Say</h2>
+        <h2 class="parent-testimonials">What Parents Say</h2>
 
         <div className="testimonial-grid">
           {[
@@ -178,6 +176,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
