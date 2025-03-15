@@ -27,8 +27,6 @@ import {
   FaUsers,
   FaRupeeSign,
 } from "react-icons/fa";
-// const PreschoolCard = () => {
-//   const [isModalOpen, setIsModalOpen] = useState(false);
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -66,67 +64,73 @@ const Home = () => {
 
       {/* Modal for Fee Structure */}
       {isModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
-            <h2>Fee Structure</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Class</th>
-                  <th>Admission Fee (₹)</th>
-                  <th>Discounted Fee (₹)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Preschool</td>
-                  <td>₹ 4,500</td>
-                  <td>
-                    ₹ 4,000 <br />
-                    <button className="buy-btn">Buy Now</button>
-                    <button className="cart-btn">Add to Cart</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>LKG</td>
-                  <td>₹ 5,000</td>
-                  <td>
-                    ₹ 4,500 <br />
-                    <button className="buy-btn">Buy Now</button>
-                    <button className="cart-btn">Add to Cart</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>UKG</td>
-                  <td>₹ 5,500</td>
-                  <td>
-                    ₹ 5,000 <br />
-                    <button className="buy-btn">Buy Now</button>
-                    <button className="cart-btn">Add to Cart</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Class 1</td>
-                  <td>₹ 6,000</td>
-                  <td>
-                    ₹ 5,500 <br />
-                    <button className="buy-btn">Buy Now</button>
-                    <button className="cart-btn">Add to Cart</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div className="modal-actions">
-              <button
-                className="cart-btn"
-                onClick={() => setIsModalOpen(false)}
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+  <div className="modal" style={{ color: "white", fontSize: "13px" }}>
+    <div className="modal-content">
+      <h2>Fee Structure</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Admission Fee (₹)</th>
+            <th>Discounted Fee (₹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Preschool</td>
+            <td>₹ 4,500</td>
+            <td>
+              <div className="price-actions">
+                ₹ 4,000
+                <button className="buy-btn">Buy Now</button>
+                <button className="cart-btn">Add to Cart</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>LKG</td>
+            <td>₹ 5,000</td>
+            <td>
+              <div className="price-actions">
+                ₹ 4,500
+                <button className="buy-btn">Buy Now</button>
+                <button className="cart-btn">Add to Cart</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>UKG</td>
+            <td>₹ 5,500</td>
+            <td>
+              <div className="price-actions">
+                ₹ 5,000
+                <button className="buy-btn">Buy Now</button>
+                <button className="cart-btn">Add to Cart</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Class 1</td>
+            <td>₹ 6,000</td>
+            <td>
+              <div className="price-actions">
+                ₹ 5,500
+                <button className="buy-btn">Buy Now</button>
+                <button className="cart-btn">Add to Cart</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div className="modal-actions">
+        <button className="cart-btn" onClick={() => setIsModalOpen(false)}>
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
 
       {/* Google Maps */}
 
@@ -143,7 +147,7 @@ const Home = () => {
         </div>
 
         {/* Amenities Section */}
-        <div className="amenities-section">
+        <div className="amenities-section"style={{ color: "#333", fontSize: "18px", fontWeight: "bold" }}>
           <h2 className="amenities-title">Our Amenities</h2>
           <div className="amenities-grid">
             {[
@@ -165,7 +169,7 @@ const Home = () => {
       </div>
 
       {/* Information & Reviews Section */}
-      <div className="info-reviews">
+      <div className="info-reviews" style={{ color: "#333", fontSize: "18px", fontWeight: "bold" }}>
         <div className="key-info">
           <h2>Key Information</h2>
           <div className="info-grid">
@@ -185,7 +189,7 @@ const Home = () => {
         </div>
 
         {/* Reviews Section */}
-        <div className="reviews">
+        <div className="reviews" style={{ color: "#333", fontSize: "18px", fontWeight: "bold" }}>
           <h2>Reviews</h2>
           {/* <p>Parent Rating Score</p> */}
           {/* <h3>5 out of 5</h3> */}
