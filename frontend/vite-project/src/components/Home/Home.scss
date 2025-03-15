@@ -325,6 +325,13 @@
     .modal-content {
       width: 80%;
       padding: 18px;
+      position: relative;
+
+      .close-btn {
+        top: 8px;
+        right: 10px;
+        font-size: 20px;
+    }
   
       table {
         font-size: 15px;
