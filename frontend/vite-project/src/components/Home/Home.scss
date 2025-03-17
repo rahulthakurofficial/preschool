@@ -924,12 +924,12 @@ h2 {
   color: #444;
 }
 
-/* Testimonials */
 .testimonials {
   margin-top: 40px;
   text-align: center;
   padding: 0 20px;
 }
+
 .parent-testimonials {
   font-size: 3rem;
   font-weight: bold;
@@ -938,50 +938,13 @@ h2 {
   margin-bottom: 20px;
 }
 
-
-
-
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
-/* Tablet View */
-@media (max-width: 768px) {
-  .testimonial-grid {
-    grid-template-columns:  repeat(2, 1fr);
-  }
-}
-
-/* Mobile View */
-@media (max-width: 480px) {
-  .testimonial-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .testimonial-card {
-    padding: 15px;
-    font-size: 14px;
-  }
-
-  .avatar {
-    font-size: 30px;
-  }
-
-  .quote-icon {
-    font-size: 16px;
-  }
-
-  .testimonial-card p {
-    font-size: 14px;
-  }
-
-  .testimonial-card h4 {
-    font-size: 16px;
-  }
-}
-
+/* Testimonial Card */
 .testimonial-card {
   background: #fff;
   padding: 20px;
@@ -1013,10 +976,89 @@ h2 {
   margin: 10px 0;
 }
 
-.testimonial-card h4 {
+/* Name & Smile Icon */
+.name-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.name-rating h4 {
   font-size: 18px;
   font-weight: bold;
   color: #222;
+}
+
+.smile-icon {
+  font-size: 22px;
+  color: #ffcc00;
+}
+
+/* ⭐ Star Rating System */
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.star {
+  font-size: 18px;
+  color: #ddd;
+}
+
+.filled {
+  color: #ffcc00; /* Gold color for filled stars */
+}
+
+.rating-score {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .testimonial-card {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .avatar {
+    font-size: 30px;
+  }
+
+  .quote-icon {
+    font-size: 16px;
+  }
+
+  .testimonial-card p {
+    font-size: 14px;
+  }
+
+  .name-rating h4 {
+    font-size: 16px;
+  }
+
+  .smile-icon {
+    font-size: 18px;
+  }
+
+  .star {
+    font-size: 16px;
+  }
 }
 
 

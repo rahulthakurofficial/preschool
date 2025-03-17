@@ -244,30 +244,45 @@ const Home = () => {
       </div>
       {/* Testimonials Section */}
       <div className="testimonials">
-        <h2 class="parent-testimonials">What Parents Say</h2>
+      <h2 className="parent-testimonials">What Parents Say</h2>
 
-        <div className="testimonial-grid">
-          {[
-            {
-              avatar: FaUserCircle,
-              name: "Amit Sharma",
-              text: "Excellent school! My child loves it.",
-            },
-            {
-              avatar: FaUserCircle,
-              name: "Rahul",
-              text: "Great staff and amazing facilities!",
-            },
-          ].map(({ avatar: Avatar, name, text }, index) => (
-            <div key={index} className="testimonial-card">
-              <Avatar className="avatar" />
-              <FaQuoteLeft className="quote-icon" />
-              <p>{text}</p>
+      <div className="testimonial-grid">
+        {[
+          {
+            avatar: FaUserCircle,
+            name: "Amit Sharma",
+            text: "Excellent school! My child loves it.",
+            rating: 5, 
+          },
+          {
+            avatar: FaUserCircle,
+            name: "Rahul",
+            text: "Great staff and amazing facilities!",
+            rating: 4,
+          },
+        ].map(({ avatar: Avatar, name, text, rating }, index) => (
+          <div key={index} className="testimonial-card">
+            <Avatar className="avatar" />
+            <FaQuoteLeft className="quote-icon" />
+            <p>{text}</p>
+
+            {/* Name & Smile Icon */}
+            <div className="name-rating">
               <h4>{name}</h4>
+              <FaSmile className="smile-icon" />
             </div>
-          ))}
-        </div>
+
+            {/* Rating System */}
+            <div className="rating">
+              {[...Array(5)].map((_, i) => (
+                <FaSmile key={i} className={i < rating ? "smile filled" : "smile"} />
+              ))}
+              <span className="rating-score">{rating}</span>
+            </div>
+          </div>
+        ))}
       </div>
+    </div>
 
       {/* Feedback Form */}
       <div className="feedback-form">
