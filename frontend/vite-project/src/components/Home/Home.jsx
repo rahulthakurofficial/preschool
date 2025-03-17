@@ -43,16 +43,17 @@ const Home = () => {
           <h2>Gigglezz Preschool | Bangalore, Karnataka</h2>
           <p>
             23, 3rd Cross Rd, Paradise Colony, JP Nagar 7th Phase, Bengaluru
-          </p>
-          <p className="price">₹ 4,584 / month</p>
-          <div className="rating">
-            <FaStar className="star-icon" />
-            <FaStar className="star-icon" />
-            <FaStar className="star-icon" />
-            <FaStar className="star-icon" />
-            <FaStar className="star-icon half-star" /> {/* Half-star can be styled with CSS */}
-            <span className="rating-value">4.5</span>
-          </div>
+          </p><div class="price-rating-container">
+        <p class="price">Rs 4,548 / Monthly</p>
+        <div class="rating">
+            <span class="star-icon">⭐</span>
+            <span class="star-icon">⭐</span>
+            <span class="star-icon">⭐</span>
+            <span class="star-icon">⭐</span>
+            <span class="half-star">⭐</span>
+            <span class="rating-value">4.5</span>
+        </div>
+    </div>
         </div>
         <div className="actions">
           <button className="map-btn">
@@ -233,9 +234,6 @@ const Home = () => {
               { icon: FaShieldAlt, text: "Safety" },
               { icon: FaVideo, text: "Hygiene" },
               { icon: FaChild, text: "Activities" },
-              // { icon: FaSmile, text: "Play & Recreation" },
-              // { icon: FaHeart, text: "Emotional Support" },
-              // { icon: FaBook, text: "Learning Resources" },
             ].map(({ icon: Icon, text }, index) => (
               <div key={index} className="rating-card">
                 <Icon className="icon" /> 5/5 <span>{text}</span>
