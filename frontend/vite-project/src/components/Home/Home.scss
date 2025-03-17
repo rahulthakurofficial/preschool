@@ -347,12 +347,7 @@
       padding: 18px;
       position: relative;
 
-    //   .close-btn {
-    //     top: 8px;
-    //     right: 10px;
-    //     font-size: 21px;
-       
-    // }c
+    
   
       table {
         font-size: 15px;
@@ -646,7 +641,7 @@ h2 {
   }
 
   .ratings {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .info-card, .rating-card {

@@ -224,8 +224,7 @@ const Home = () => {
           style={{ color: "#333", fontSize: "18px", fontWeight: "bold" }}
         >
           <h2>Reviews</h2>
-          {/* <p>Parent Rating Score</p> */}
-          {/* <h3>5 out of 5</h3> */}
+         
           <div className="ratings">
             {[
               { icon: FaHospitalSymbol, text: "Infrastructure" },
@@ -234,9 +233,9 @@ const Home = () => {
               { icon: FaShieldAlt, text: "Safety" },
               { icon: FaVideo, text: "Hygiene" },
               { icon: FaChild, text: "Activities" },
-              { icon: FaSmile, text: "Play & Recreation" },
-              { icon: FaHeart, text: "Emotional Support" },
-              { icon: FaBook, text: "Learning Resources" },
+              // { icon: FaSmile, text: "Play & Recreation" },
+              // { icon: FaHeart, text: "Emotional Support" },
+              // { icon: FaBook, text: "Learning Resources" },
             ].map(({ icon: Icon, text }, index) => (
               <div key={index} className="rating-card">
                 <Icon className="icon" /> 5/5 <span>{text}</span>
