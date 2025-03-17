@@ -26,6 +26,7 @@ import {
   FaUserCircle,
   FaUsers,
   FaRupeeSign,
+  FaStar,
 } from "react-icons/fa";
 
 const Home = () => {
@@ -44,6 +45,14 @@ const Home = () => {
             23, 3rd Cross Rd, Paradise Colony, JP Nagar 7th Phase, Bengaluru
           </p>
           <p className="price">₹ 4,584 / month</p>
+          <div className="rating">
+            <FaStar className="star-icon" />
+            <FaStar className="star-icon" />
+            <FaStar className="star-icon" />
+            <FaStar className="star-icon" />
+            <FaStar className="star-icon half-star" /> {/* Half-star can be styled with CSS */}
+            <span className="rating-value">4.5</span>
+          </div>
         </div>
         <div className="actions">
           <button className="map-btn">
@@ -64,77 +73,85 @@ const Home = () => {
 
       {/* Modal for Fee Structure */}
       {isModalOpen && (
-  <div className="modal" style={{ color: "white", fontSize: "13px" }}>
-    <div className="modal-content">
-      {/* Close Button */}
-      <button className="close-btn" onClick={() => setIsModalOpen(false)} style={{ marginLeft: "400px" }}>✖</button>
-      
-      <h2>Fee Structure</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Class</th>
-            <th>Admission Fee (₹)</th>
-            <th>Discounted Fee (₹)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Preschool</td>
-            <td>₹ 4,500</td>
-            <td>
-              <div className="price-actions">
-                ₹ 4,000
-                <button className="buy-btn">Buy Now</button>
-                <button className="cart-btn">Add to Cart</button>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>LKG</td>
-            <td>₹ 5,000</td>
-            <td>
-              <div className="price-actions">
-                ₹ 4,500
-                <button className="buy-btn">Buy Now</button>
-                <button className="cart-btn">Add to Cart</button>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>UKG</td>
-            <td>₹ 5,500</td>
-            <td>
-              <div className="price-actions">
-                ₹ 5,000
-                <button className="buy-btn">Buy Now</button>
-                <button className="cart-btn">Add to Cart</button>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>Class 1</td>
-            <td>₹ 6,000</td>
-            <td>
-              <div className="price-actions">
-                ₹ 5,500
-                <button className="buy-btn">Buy Now</button>
-                <button className="cart-btn">Add to Cart</button>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+        <div className="modal" style={{ color: "white", fontSize: "13px" }}>
+          <div className="modal-content">
+            {/* Close Button */}
+            <button
+              className="close-btn"
+              onClick={() => setIsModalOpen(false)}
+              style={{ marginLeft: "400px" }}
+            >
+              ✖
+            </button>
 
-      <div className="modal-actions">
-        <button className="cart-btn" onClick={() => setIsModalOpen(false)}>
-          Close
-        </button>
-      </div>
-    </div>
-  </div>
-)}
+            <h2>Fee Structure</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Class</th>
+                  <th>Admission Fee (₹)</th>
+                  <th>Discounted Fee (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Preschool</td>
+                  <td>₹ 4,500</td>
+                  <td>
+                    <div className="price-actions">
+                      ₹ 4,000
+                      <button className="buy-btn">Buy Now</button>
+                      <button className="cart-btn">Add to Cart</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>LKG</td>
+                  <td>₹ 5,000</td>
+                  <td>
+                    <div className="price-actions">
+                      ₹ 4,500
+                      <button className="buy-btn">Buy Now</button>
+                      <button className="cart-btn">Add to Cart</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>UKG</td>
+                  <td>₹ 5,500</td>
+                  <td>
+                    <div className="price-actions">
+                      ₹ 5,000
+                      <button className="buy-btn">Buy Now</button>
+                      <button className="cart-btn">Add to Cart</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Class 1</td>
+                  <td>₹ 6,000</td>
+                  <td>
+                    <div className="price-actions">
+                      ₹ 5,500
+                      <button className="buy-btn">Buy Now</button>
+                      <button className="cart-btn">Add to Cart</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
+            <div className="modal-actions">
+              <button
+                className="cart-btn"
+                onClick={() => setIsModalOpen(false)}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Google Maps */}
 
@@ -148,10 +165,16 @@ const Home = () => {
             allowFullScreen=""
             loading="lazy"
           ></iframe>
+          <button className="call-btn" onClick={() => setIsModalOpen(true)}>
+            <FaRupeeSign className="icon" /> View Fee Structure
+          </button>
         </div>
 
         {/* Amenities Section */}
-        <div className="amenities-section"style={{ color: "#333", fontSize: "18px", fontWeight: "bold" }}>
+        <div
+          className="amenities-section"
+          style={{ color: "#333", fontSize: "18px", fontWeight: "bold" }}
+        >
           <h2 className="amenities-title">Our Amenities</h2>
           <div className="amenities-grid">
             {[
@@ -173,7 +196,10 @@ const Home = () => {
       </div>
 
       {/* Information & Reviews Section */}
-      <div className="info-reviews" style={{ color: "#333", fontSize: "18px", fontWeight: "bold" }}>
+      <div
+        className="info-reviews"
+        style={{ color: "#333", fontSize: "18px", fontWeight: "bold" }}
+      >
         <div className="key-info">
           <h2>Key Information</h2>
           <div className="info-grid">
@@ -193,7 +219,10 @@ const Home = () => {
         </div>
 
         {/* Reviews Section */}
-        <div className="reviews" style={{ color: "#333", fontSize: "18px", fontWeight: "bold" }}>
+        <div
+          className="reviews"
+          style={{ color: "#333", fontSize: "18px", fontWeight: "bold" }}
+        >
           <h2>Reviews</h2>
           {/* <p>Parent Rating Score</p> */}
           {/* <h3>5 out of 5</h3> */}
@@ -208,7 +237,6 @@ const Home = () => {
               { icon: FaSmile, text: "Play & Recreation" },
               { icon: FaHeart, text: "Emotional Support" },
               { icon: FaBook, text: "Learning Resources" },
-             
             ].map(({ icon: Icon, text }, index) => (
               <div key={index} className="rating-card">
                 <Icon className="icon" /> 5/5 <span>{text}</span>
