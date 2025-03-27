@@ -16,16 +16,12 @@ import {
   FaSwimmer,
   FaSeedling,
   FaVideo,
- 
   FaChild,
   FaRunning,
- 
   FaSmile,
   FaQuoteLeft,
   FaUserCircle,
- 
   FaRupeeSign,
- 
 } from "react-icons/fa";
 import { FaFaceSmile } from "react-icons/fa6";
 const Home = () => {
