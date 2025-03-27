@@ -3,6 +3,19 @@
     background-color: #222;
     
   }
+
+  .admission-banner {
+    position: absolute;
+    top: 75px;
+    right: 15px;
+    width: 120px; /* Adjust as needed */
+  }
+  
+  .admission-banner img {
+    width: 100%; /* Make image responsive */
+    height: auto;
+  }
+  
   
   .preschool-card {
     display: flex;
@@ -499,6 +512,27 @@
     gap: 6px;
   }
 }
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #f44336;
+  white-space: nowrap; 
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+  // margin-right: 00px;
+}
+
+.star-icon, .half-star {
+  font-size: 16px; /* Adjust star size */
+  color: gold;
+}
+
 
 
   

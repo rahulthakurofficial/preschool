@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Home.scss";
 import gigglezz from "/src/assets/gigglezz-logo.png";
+import admn from "/src/assets/admn.png";
 import {
   FaPhoneAlt,
   FaMapMarkerAlt,
@@ -36,6 +37,9 @@ const Home = () => {
     <div className="preschool-container">
       {/* Preschool Card */}
       <div className="preschool-card">
+        <div className="admission-banner">
+          <img src={admn} alt="Admission Open" />
+        </div>
         <div className="logo">
           <img src={gigglezz} alt="Gigglezz Preschool" />
         </div>
@@ -43,17 +47,19 @@ const Home = () => {
           <h2>Gigglezz Preschool | Bangalore, Karnataka</h2>
           <p>
             23, 3rd Cross Rd, Paradise Colony, JP Nagar 7th Phase, Bengaluru
-          </p><div class="price-rating-container">
-        <p class="price">Rs 4,548 / Monthly</p>
-        <div class="rating">
-            <span class="star-icon">⭐</span>
-            <span class="star-icon">⭐</span>
-            <span class="star-icon">⭐</span>
-            <span class="star-icon">⭐</span>
-            <span class="half-star">⭐</span>
-            <span class="rating-value">4.5</span>
-        </div>
-    </div>
+          </p>
+
+          <div class="price-rating-container">
+            <p class="price">Rs 4,548 / Monthly</p>
+            <div class="rating">
+              <span class="star-icon">⭐</span>
+              <span class="star-icon">⭐</span>
+              <span class="star-icon">⭐</span>
+              <span class="star-icon">⭐</span>
+              <span class="half-star">⭐</span>
+              <span class="rating-value">4.5</span>
+            </div>
+          </div>
         </div>
         <div className="actions">
           <button className="map-btn">
@@ -206,7 +212,7 @@ const Home = () => {
           <div className="info-grid">
             {[
               { icon: FaVideo, text: "CCTV", value: "Yes" },
-              { icon: FaChild, text: "Day Care", value: "Yes" },
+              { icon: FaChild, text: "Day Care and Night Care", value: "Yes" },
               { icon: FaRunning, text: "Outdoor Sports", value: "Yes" },
               { icon: FaChild, text: "Minimum Age", value: "02 Year(s)" },
               { icon: FaChild, text: "Maximum Age", value: "06 Year(s)" },
@@ -225,7 +231,7 @@ const Home = () => {
           style={{ color: "#333", fontSize: "18px", fontWeight: "bold" }}
         >
           <h2>Reviews</h2>
-         
+
           <div className="ratings">
             {[
               { icon: FaHospitalSymbol, text: "Infrastructure" },
@@ -244,45 +250,48 @@ const Home = () => {
       </div>
       {/* Testimonials Section */}
       <div className="testimonials">
-      <h2 className="parent-testimonials">What Parents Say</h2>
+        <h2 className="parent-testimonials">What Parents Say</h2>
 
-      <div className="testimonial-grid">
-        {[
-          {
-            avatar: FaUserCircle,
-            name: "Amit Sharma",
-            text: "Excellent school! My child loves it.",
-            rating: 5, 
-          },
-          {
-            avatar: FaUserCircle,
-            name: "Rahul",
-            text: "Great staff and amazing facilities!",
-            rating: 4,
-          },
-        ].map(({ avatar: Avatar, name, text, rating }, index) => (
-          <div key={index} className="testimonial-card">
-            <Avatar className="avatar" />
-            <FaQuoteLeft className="quote-icon" />
-            <p>{text}</p>
+        <div className="testimonial-grid">
+          {[
+            {
+              avatar: FaUserCircle,
+              name: "Amit Sharma",
+              text: "Excellent school! My child loves it.",
+              rating: 5,
+            },
+            {
+              avatar: FaUserCircle,
+              name: "Rahul",
+              text: "Great staff and amazing facilities!",
+              rating: 4,
+            },
+          ].map(({ avatar: Avatar, name, text, rating }, index) => (
+            <div key={index} className="testimonial-card">
+              <Avatar className="avatar" />
+              <FaQuoteLeft className="quote-icon" />
+              <p>{text}</p>
 
-            {/* Name & Smile Icon */}
-            <div className="name-rating">
-              <h4>{name}</h4>
-              <FaSmile className="smile-icon" />
+              {/* Name & Smile Icon */}
+              <div className="name-rating">
+                <h4>{name}</h4>
+                <FaSmile className="smile-icon" />
+              </div>
+
+              {/* Rating System */}
+              <div className="rating">
+                {[...Array(5)].map((_, i) => (
+                  <FaSmile
+                    key={i}
+                    className={i < rating ? "smile filled" : "smile"}
+                  />
+                ))}
+                <span className="rating-score">{rating}</span>
+              </div>
             </div>
-
-            {/* Rating System */}
-            <div className="rating">
-              {[...Array(5)].map((_, i) => (
-                <FaSmile key={i} className={i < rating ? "smile filled" : "smile"} />
-              ))}
-              <span className="rating-score">{rating}</span>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
 
       {/* Feedback Form */}
       <div className="feedback-form">
