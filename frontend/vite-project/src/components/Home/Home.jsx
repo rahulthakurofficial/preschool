@@ -34,7 +34,7 @@ const Home = () => {
     { text: "Safety", rating: 5, image: "safety.jpg" },
     { text: "Hygiene", rating: 4, image: "hygiene.jpg" },
     { text: "Activities", rating: 3, image: "activities.jpg" },
-];
+  ];
 
   return (
     <div className="preschool-container">
@@ -103,15 +103,16 @@ const Home = () => {
                   <th>Class</th>
                   <th>Admission Fee (₹)</th>
                   <th>Discounted Fee (₹)</th>
+                  <th>Actions</th> {/* Added Actions column */}
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>Preschool</td>
                   <td>₹ 4,500</td>
+                  <td>₹ 4,000</td> {/* Removed buttons from here */}
                   <td>
                     <div className="price-actions">
-                      ₹ 4,000
                       <button className="buy-btn">Buy Now</button>
                       <button className="cart-btn">Add to Cart</button>
                     </div>
@@ -120,9 +121,9 @@ const Home = () => {
                 <tr>
                   <td>LKG</td>
                   <td>₹ 5,000</td>
+                  <td>₹ 4,500</td>
                   <td>
                     <div className="price-actions">
-                      ₹ 4,500
                       <button className="buy-btn">Buy Now</button>
                       <button className="cart-btn">Add to Cart</button>
                     </div>
@@ -131,9 +132,9 @@ const Home = () => {
                 <tr>
                   <td>UKG</td>
                   <td>₹ 5,500</td>
+                  <td>₹ 5,000</td>
                   <td>
                     <div className="price-actions">
-                      ₹ 5,000
                       <button className="buy-btn">Buy Now</button>
                       <button className="cart-btn">Add to Cart</button>
                     </div>
@@ -142,9 +143,78 @@ const Home = () => {
                 <tr>
                   <td>Class 1</td>
                   <td>₹ 6,000</td>
+                  <td>₹ 5,500</td>
                   <td>
                     <div className="price-actions">
-                      ₹ 5,500
+                      <button className="buy-btn">Buy Now</button>
+                      <button className="cart-btn">Add to Cart</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Our Extra Services</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Price (₹)</th>
+                  <th>Discounted Fee (₹)</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Summer Camp</td>
+                  <td>₹ 2,000</td>
+                  <td>₹ 1,800</td>
+                  <td>
+                    <div className="price-actions">
+                      <button className="buy-btn">Buy Now</button>
+                      <button className="cart-btn">Add to Cart</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Winter Camp</td>
+                  <td>₹ 2,500</td>
+                  <td>₹ 2,200</td>
+                  <td>
+                    <div className="price-actions">
+                      <button className="buy-btn">Buy Now</button>
+                      <button className="cart-btn">Add to Cart</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Seasonal Camp</td>
+                  <td>₹ 3,000</td>
+                  <td>₹ 2,700</td>
+                  <td>
+                    <div className="price-actions">
+                      <button className="buy-btn">Buy Now</button>
+                      <button className="cart-btn">Add to Cart</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Day Care</td>
+                  <td>₹ 1,500</td>
+                  <td>₹ 1,400</td>
+                  <td>
+                    <div className="price-actions">
+                      <button className="buy-btn">Buy Now</button>
+                      <button className="cart-btn">Add to Cart</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Night Care</td>
+                  <td>₹ 1,800</td>
+                  <td>₹ 1,600</td>
+                  <td>
+                    <div className="price-actions">
                       <button className="buy-btn">Buy Now</button>
                       <button className="cart-btn">Add to Cart</button>
                     </div>
@@ -247,6 +317,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* camp */}
+
       {/* Testimonials Section */}
       <div className="testimonials">
         <h2 className="parent-testimonials">What Parents Say</h2>
