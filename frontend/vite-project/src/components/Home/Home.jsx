@@ -16,22 +16,29 @@ import {
   FaSwimmer,
   FaSeedling,
   FaVideo,
-  FaBook,
+ 
   FaChild,
   FaRunning,
-  FaHospitalSymbol,
-  FaGraduationCap,
-  FaShieldAlt,
+ 
   FaSmile,
   FaQuoteLeft,
   FaUserCircle,
-  FaUsers,
+ 
   FaRupeeSign,
-  FaStar,
+ 
 } from "react-icons/fa";
-
+import { FaFaceSmile } from "react-icons/fa6";
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const ratingsData = [
+    { text: "Infrastructure", rating: 5, image: "infrastructure.jpg" },
+    { text: "Academics", rating: 4, image: "academics.jpg" },
+    { text: "Faculty", rating: 3, image: "faculty.jpg" },
+    { text: "Safety", rating: 5, image: "safety.jpg" },
+    { text: "Hygiene", rating: 4, image: "hygiene.jpg" },
+    { text: "Activities", rating: 3, image: "activities.jpg" },
+];
 
   return (
     <div className="preschool-container">
@@ -50,7 +57,9 @@ const Home = () => {
           </p>
 
           <div class="price-rating-container">
-            <p class="price">Rs 4,548 / Monthly</p>
+            <p class="price">
+              Rs 4,548 / Monthly, <span class="emi">EMI Available</span>
+            </p>
             <div class="rating">
               <span class="star-icon">⭐</span>
               <span class="star-icon">⭐</span>
@@ -172,9 +181,6 @@ const Home = () => {
             allowFullScreen=""
             loading="lazy"
           ></iframe>
-          <button className="call-btn" onClick={() => setIsModalOpen(true)}>
-            <FaRupeeSign className="icon" /> View Fee Structure
-          </button>
         </div>
 
         {/* Amenities Section */}
@@ -212,7 +218,7 @@ const Home = () => {
           <div className="info-grid">
             {[
               { icon: FaVideo, text: "CCTV", value: "Yes" },
-              { icon: FaChild, text: "Day Care and Night Care", value: "Yes" },
+              { icon: FaChild, text: "Day & Night Care", value: "Yes" },
               { icon: FaRunning, text: "Outdoor Sports", value: "Yes" },
               { icon: FaChild, text: "Minimum Age", value: "02 Year(s)" },
               { icon: FaChild, text: "Maximum Age", value: "06 Year(s)" },
@@ -231,18 +237,15 @@ const Home = () => {
           style={{ color: "#333", fontSize: "18px", fontWeight: "bold" }}
         >
           <h2>Reviews</h2>
-
           <div className="ratings">
-            {[
-              { icon: FaHospitalSymbol, text: "Infrastructure" },
-              { icon: FaGraduationCap, text: "Academics" },
-              { icon: FaUserTie, text: "Faculty" },
-              { icon: FaShieldAlt, text: "Safety" },
-              { icon: FaVideo, text: "Hygiene" },
-              { icon: FaChild, text: "Activities" },
-            ].map(({ icon: Icon, text }, index) => (
+            {ratingsData.map(({ text, rating }, index) => (
               <div key={index} className="rating-card">
-                <Icon className="icon" /> 5/5 <span>{text}</span>
+                <div className="smiley-rating">
+                  {[...Array(rating)].map((_, i) => (
+                    <FaFaceSmile key={i} className="smile-icon" />
+                  ))}
+                </div>
+                <span>{text}</span>
               </div>
             ))}
           </div>
@@ -272,13 +275,11 @@ const Home = () => {
               <FaQuoteLeft className="quote-icon" />
               <p>{text}</p>
 
-              {/* Name & Smile Icon */}
               <div className="name-rating">
                 <h4>{name}</h4>
                 <FaSmile className="smile-icon" />
               </div>
 
-              {/* Rating System */}
               <div className="rating">
                 {[...Array(5)].map((_, i) => (
                   <FaSmile

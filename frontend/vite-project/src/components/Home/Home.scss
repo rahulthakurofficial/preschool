@@ -15,6 +15,7 @@
     width: 100%; /* Make image responsive */
     height: auto;
   }
+ 
   
   
   .preschool-card {
@@ -290,6 +291,32 @@
       gap: 6px;
     }
   }
+
+  .price-rating-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Adds spacing between price and rating */
+}
+
+.emi {
+    font-size: 14px;
+    color: #007bff; /* Blue color */
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
   
 
   .modal {
@@ -888,7 +915,16 @@ h2 {
     font-size: 12px;
   }
 }
+.smiley-rating {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px; 
+  // justify-content: flex-start;
+   align-self: flex-start;
+ 
+  
 
+}
 
 
 // Testimonial & feedback 
