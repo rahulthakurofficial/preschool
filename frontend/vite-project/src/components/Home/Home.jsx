@@ -36,6 +36,22 @@ const Home = () => {
     { text: "Activities", rating: 3, image: "activities.jpg" },
   ];
 
+  const [isPurchaseModalOpen, setIsPurchaseModalOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [cart, setCart] = useState({});
+
+  const updateCart = (itemName, change) => {
+    setCart((prevCart) => {
+      const newCount = (prevCart[itemName] || 0) + change;
+      if (newCount <= 0) {
+        const { [itemName]: _, ...rest } = prevCart;
+        return rest;
+      }
+      return { ...prevCart, [itemName]: newCount };
+    });
+  };
+  const [studentCount, setStudentCount] = useState(1);
+
   return (
     <div className="preschool-container">
       {/* Preschool Card */}
@@ -87,7 +103,6 @@ const Home = () => {
       {isModalOpen && (
         <div className="modal" style={{ color: "white", fontSize: "13px" }}>
           <div className="modal-content">
-            {/* Close Button */}
             <button
               className="close-btn"
               onClick={() => setIsModalOpen(false)}
@@ -95,7 +110,6 @@ const Home = () => {
             >
               ✖
             </button>
-
             <h2>Fee Structure</h2>
             <table>
               <thead>
@@ -103,54 +117,46 @@ const Home = () => {
                   <th>Class</th>
                   <th>Admission Fee (₹)</th>
                   <th>Discounted Fee (₹)</th>
-                  <th>Actions</th> {/* Added Actions column */}
+                  <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Preschool</td>
-                  <td>₹ 4,500</td>
-                  <td>₹ 4,000</td> {/* Removed buttons from here */}
-                  <td>
-                    <div className="price-actions">
-                      <button className="buy-btn">Buy Now</button>
-                      <button className="cart-btn">Add to Cart</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>LKG</td>
-                  <td>₹ 5,000</td>
-                  <td>₹ 4,500</td>
-                  <td>
-                    <div className="price-actions">
-                      <button className="buy-btn">Buy Now</button>
-                      <button className="cart-btn">Add to Cart</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>UKG</td>
-                  <td>₹ 5,500</td>
-                  <td>₹ 5,000</td>
-                  <td>
-                    <div className="price-actions">
-                      <button className="buy-btn">Buy Now</button>
-                      <button className="cart-btn">Add to Cart</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Class 1</td>
-                  <td>₹ 6,000</td>
-                  <td>₹ 5,500</td>
-                  <td>
-                    <div className="price-actions">
-                      <button className="buy-btn">Buy Now</button>
-                      <button className="cart-btn">Add to Cart</button>
-                    </div>
-                  </td>
-                </tr>
+                {[
+                  {
+                    name: "Preschool",
+                    admissionFee: 4500,
+                    discountedFee: 4000,
+                  },
+                  { name: "LKG", admissionFee: 5000, discountedFee: 4500 },
+                  { name: "UKG", admissionFee: 5500, discountedFee: 5000 },
+                  { name: "Class 1", admissionFee: 6000, discountedFee: 5500 },
+                ].map((item) => (
+                  <tr key={item.name}>
+                    <td>{item.name}</td>
+                    <td>₹ {item.admissionFee}</td>
+                    <td>₹ {item.discountedFee}</td>
+                    <td>
+                      <div className="price-actions">
+                        <button
+                          className="buy-btn"
+                          onClick={() => {
+                            setSelectedItem(item);
+                            setIsPurchaseModalOpen(true);
+                          }}
+                        >
+                          Buy Now
+                        </button>
+
+                        <button
+                          className="cart-btn"
+                          onClick={() => updateCart(item.name, 1)}
+                        >
+                          Add to Cart
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
 
@@ -165,61 +171,39 @@ const Home = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Summer Camp</td>
-                  <td>₹ 2,000</td>
-                  <td>₹ 1,800</td>
-                  <td>
-                    <div className="price-actions">
-                      <button className="buy-btn">Buy Now</button>
-                      <button className="cart-btn">Add to Cart</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Winter Camp</td>
-                  <td>₹ 2,500</td>
-                  <td>₹ 2,200</td>
-                  <td>
-                    <div className="price-actions">
-                      <button className="buy-btn">Buy Now</button>
-                      <button className="cart-btn">Add to Cart</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Seasonal Camp</td>
-                  <td>₹ 3,000</td>
-                  <td>₹ 2,700</td>
-                  <td>
-                    <div className="price-actions">
-                      <button className="buy-btn">Buy Now</button>
-                      <button className="cart-btn">Add to Cart</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Day Care</td>
-                  <td>₹ 1,500</td>
-                  <td>₹ 1,400</td>
-                  <td>
-                    <div className="price-actions">
-                      <button className="buy-btn">Buy Now</button>
-                      <button className="cart-btn">Add to Cart</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Night Care</td>
-                  <td>₹ 1,800</td>
-                  <td>₹ 1,600</td>
-                  <td>
-                    <div className="price-actions">
-                      <button className="buy-btn">Buy Now</button>
-                      <button className="cart-btn">Add to Cart</button>
-                    </div>
-                  </td>
-                </tr>
+                {[
+                  { name: "Summer Camp", price: 2000, discountedPrice: 1800 },
+                  { name: "Winter Camp", price: 2500, discountedPrice: 2200 },
+                  { name: "Seasonal Camp", price: 3000, discountedPrice: 2700 },
+                  { name: "Day Care", price: 1500, discountedPrice: 1400 },
+                  { name: "Night Care", price: 1800, discountedPrice: 1600 },
+                ].map((item) => (
+                  <tr key={item.name}>
+                    <td>{item.name}</td>
+                    <td>₹ {item.price}</td>
+                    <td>₹ {item.discountedPrice}</td>
+                    <td>
+                      <div className="price-actions">
+                        <button
+                          className="buy-btn"
+                          onClick={() => {
+                            setSelectedItem(item);
+                            setIsPurchaseModalOpen(true);
+                          }}
+                        >
+                          Buy Now
+                        </button>
+
+                        <button
+                          className="cart-btn"
+                          onClick={() => updateCart(item.name, 1)}
+                        >
+                          Add to Cart
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
 
@@ -232,6 +216,53 @@ const Home = () => {
               </button>
             </div>
           </div>
+        </div>
+      )}
+
+      {isPurchaseModalOpen && selectedItem && (
+        <div className="purchase-modal">
+          <div className="inner-modal-content">
+            <h2>Purchase {selectedItem.name}</h2>
+
+            <label>No. Of Students:</label>
+            <select
+              value={studentCount}
+              onChange={(e) => setStudentCount(Number(e.target.value))}
+            >
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+
+            {/* Dynamically generate input fields for student names */}
+            {[...Array(studentCount)].map((_, index) => (
+              <input
+                key={index}
+                type="text"
+                placeholder={`Child's Name ${index + 1}`}
+              />
+            ))}
+
+            <input type="text" placeholder="Parent's Name" />
+            <input type="email" placeholder="Email ID" />
+            <input type="number" placeholder="Mobile No." />
+            <input type="text" placeholder="Address" />
+            <input type="text" placeholder="Location" />
+
+            <button
+              className="purchase-confirm-btn"
+              onClick={() => setIsPurchaseModalOpen(false)}
+            >
+              Buy Now
+            </button>
+          </div>
+
+          <button
+            className="purchase-close-btn"
+            onClick={() => setIsPurchaseModalOpen(false)}
+            style={{ marginLeft: "400px" }}
+          >
+            ✖
+          </button>
         </div>
       )}
 
