@@ -622,6 +622,10 @@
     }
   }
 }
+.purchase-confirm-btn{
+  margin-right: 60%;
+  background-color: #28a745;
+}
 
 table,
 th,
@@ -1411,33 +1415,3 @@ h2 {
 
 
 
-// {/* {isPurchaseModalOpen && selectedItem && (
-//   <div className="purchase-modal">
-//     <div className="inner-modal-content">
-//       <h2>Purchase {selectedItem.name}</h2>
-//       <label>No. Of Students:</label>
-//       <select>
-//         <option value="1">1</option>
-//         <option value="2">2</option>
-//       </select>
-
-//       <input type="text" placeholder="Child's Name" />
-//       <input type="text" placeholder="Parent's Name" />
-//       <input type="email" placeholder="Email ID" />
-//       <input type="number" Mobile Number="Mobile No."/>
-//       <input type="text" placeholder="Address" />
-//       <input type="text" placeholder="Location" />
-
-//       <button className="purchse-confirm-btn" onClick={() => setIsPurchaseModalOpen(false)}>
-//         Buy Now
-//       </button>
-
-      
-//     </div>
-
-    
-//     <button className="purchase-close-btn" onClick={() => setIsPurchaseModalOpen(false)} style={{ marginLeft: "400px" }}>
-//       ✖
-//     </button>
-//   </div>
-// )} */}

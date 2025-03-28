@@ -123,7 +123,7 @@ const Home = () => {
               <tbody>
                 {[
                   {
-                    name: "Preschool",
+                    name: "Play Class",
                     admissionFee: 4500,
                     discountedFee: 4000,
                   },
