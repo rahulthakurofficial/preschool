@@ -9,16 +9,28 @@
   top: 75px;
   right: 15px;
   width: 120px;
-  /* Adjust as needed */
 }
 
 .admission-banner img {
   width: 100%;
-  /* Make image responsive */
   height: auto;
+}
+@media (max-width: 768px) {
+  .admission-banner {
+    top: 60px;
+    right: 10px;
+    width: 100px; 
+  }
 }
 
 
+@media (max-width: 480px) {
+  .admission-banner {
+    top: 50px;
+    right: 5px;
+    width: 80px; 
+}
+}
 
 .preschool-card {
   display: flex;
