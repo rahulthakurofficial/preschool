@@ -223,7 +223,7 @@ const Home = () => {
       {isPurchaseModalOpen && selectedItem && (
         <div className="purchase-modal">
           <div className="inner-modal-content">
-            <h2>Fill a Form for {selectedItem.name}</h2>
+            <h2>Form for {selectedItem.name}</h2>
 
             <label>No. Of Students:</label>
             <select
