@@ -209,7 +209,7 @@ const Home = () => {
 
             <div className="modal-actions">
               <button
-                className="cart-btn"
+                className="close-btn"
                 onClick={() => setIsModalOpen(false)}
               >
                 Close
@@ -259,7 +259,7 @@ const Home = () => {
           <button
             className="purchase-close-btn"
             onClick={() => setIsPurchaseModalOpen(false)}
-            style={{ marginLeft: "400px" }}
+            // style={{ marginLeft: "400px" }}
           >
             ✖
           </button>
