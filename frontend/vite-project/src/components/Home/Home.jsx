@@ -106,7 +106,8 @@ const Home = () => {
             <button
               className="close-btn"
               onClick={() => setIsModalOpen(false)}
-              style={{ marginLeft: "400px" }}
+              style={{ marginLeft: "400px", color: "black" }}
+
             >
               ✖
             </button>
