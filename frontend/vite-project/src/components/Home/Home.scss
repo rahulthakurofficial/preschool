@@ -890,7 +890,7 @@ td {
 
 h2 {
   font-size: 26px;
-  font-weight: bold;
+ font-weight: bold;
   color: #333;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -917,7 +917,7 @@ h2 {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: visible;
-  /* Ensures shadows render properly */
+ 
 }
 
 .info-card:hover,
@@ -929,16 +929,15 @@ h2 {
 /* Icon Styling */
 .icon {
   font-size: 24px;
-  // color: #f44336;
   margin-right: 15px;
 }
 
 /* Text Styling */
 .info-card span,
 .rating-card span {
-  font-size: 16px;
-  font-weight: 600;
-  color: #444;
+  font-size: 14px;
+  // font-weight: 600;
+  //color: #444;
 }
 
 /* Reviews Section */
@@ -1190,8 +1189,8 @@ h2 {
 /* Text */
 .info-card span,
 .rating-card span {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 14px;
+ // font-weight: 600;
   color: #444;
 }
 

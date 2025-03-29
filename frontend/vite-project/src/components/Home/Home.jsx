@@ -279,7 +279,7 @@ const Home = () => {
         {/* Amenities Section */}
         <div
           className="amenities-section"
-          style={{ color: "#333", fontSize: "18px", fontWeight: "bold" }}
+          style={{ color: "#333", fontSize: "14px" }}
         >
           <h2 className="amenities-title">Our Amenities</h2>
           <div className="amenities-grid">
@@ -304,7 +304,7 @@ const Home = () => {
       {/* Information & Reviews Section */}
       <div
         className="info-reviews"
-        style={{ color: "#333", fontSize: "18px", fontWeight: "bold" }}
+        style={{ color: "#333", fontSize: "14px" }}
       >
         <div className="key-info">
           <h2>Key Information</h2>
@@ -313,8 +313,8 @@ const Home = () => {
               { icon: FaVideo, text: "CCTV", value: "Yes" },
               { icon: FaChild, text: "Day & Night Care", value: "Yes" },
               { icon: FaRunning, text: "Outdoor Sports", value: "Yes" },
-              { icon: FaChild, text: "Minimum Age", value: "02 Year(s)" },
-              { icon: FaChild, text: "Maximum Age", value: "06 Year(s)" },
+              { icon: FaChild, text: "Minimum Age", value: "02 Years" },
+              { icon: FaChild, text: "Maximum Age", value: "06 Years" },
               { icon: FaUtensils, text: "Meals Provided", value: "Yes" },
             ].map(({ icon: Icon, text, value }, index) => (
               <div key={index} className="info-card">
@@ -327,7 +327,7 @@ const Home = () => {
         {/* Reviews Section */}
         <div
           className="reviews"
-          style={{ color: "#333", fontSize: "18px", fontWeight: "bold" }}
+          style={{ color: "#333", fontSize: "14px" }}
         >
           <h2>Reviews</h2>
           <div className="ratings">
