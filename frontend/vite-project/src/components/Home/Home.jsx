@@ -106,12 +106,13 @@ const Home = () => {
             <button
               className="close-btn"
               onClick={() => setIsModalOpen(false)}
-              style={{ marginLeft: "400px", color: "black" }}
+              // style={{ marginLeft: "400px", color: "pink" }}
 
             >
               ✖
             </button>
-            <h2>Fee Structure</h2>
+            <h2 className="fee-structure-heading">Fee Structure</h2>
+
             <table>
               <thead>
                 <tr>
@@ -161,7 +162,7 @@ const Home = () => {
               </tbody>
             </table>
 
-            <h3>Our Extra Services</h3>
+            <h3 className="extra-services">Our Extra Services</h3>
             <table>
               <thead>
                 <tr>
@@ -209,12 +210,6 @@ const Home = () => {
             </table>
 
             <div className="modal-actions">
-              {/* <button
-                className="close-btn"
-                onClick={() => setIsModalOpen(false)}
-              >
-                Close
-              </button> */}
             </div>
           </div>
         </div>

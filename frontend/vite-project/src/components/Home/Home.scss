@@ -335,81 +335,147 @@
   gap: 5px;
 }
 
-
-
-
-
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 10%; // Changed from 50% to 10% to prevent hiding
+  left: 50%;
+  transform: translateX(-50%); // Removed translateY(-50%) to avoid cutting content
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh; // Ensuring the modal does not exceed viewport height
+  overflow-y: auto; // Enables scrolling when content is long
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
   z-index: 1000;
-  overflow-y: auto;
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: cyan;
+    border: none;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    &:hover {
+      background: darkcyan;
+    }
+  }
 
   .modal-content {
-    position: relative;
-    background: white;
-    padding: 20px;
-    width: 90%;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    animation: fadeIn 0.3s ease-in-out;
-    outline: 2px solid white;
-    color: #222;
-    h2 {
-      margin-bottom: 250px;
-      color: black;
+    h2.fee-structure-heading {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 15px;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-bottom: 20px;
-      th,
-      td {
-        border: 2px solid #ddd;
-        padding: 10px;
+      margin: 15px 0;
+
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
         text-align: center;
+        color: black;
       }
+
       th {
         background: black;
-        font-weight: bold;
         color: white;
       }
+
+      td {
+        background: #f5f5f5;
+      }
     }
-    .modal-actions {
+
+    .extra-services {
+      color: #222;
+    }
+
+    .price-actions {
       display: flex;
       justify-content: center;
       gap: 10px;
-      margin-left: 400px;
-      margin-top: 15px;
-      flex-wrap: wrap;
+
+      .buy-btn, .cart-btn {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.3s ease-in-out;
+      }
+
+      .buy-btn {
+        background: #28a745;
+        color: white;
+
+        &:hover {
+          background: #218838;
+        }
+      }
+
+      .cart-btn {
+        background: #007bff;
+        color: white;
+
+        &:hover {
+          background: #0056b3;
+        }
+      }
     }
   }
 }
 
-.close-btn {
-  background-color: cyan;
-}
-
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+// Responsive Design
+@media (max-width: 768px) {
+  .modal {
+    width: 95%;
+    max-width: 400px;
+    padding: 15px;
+    max-height: 85vh; // Adjust for smaller screens
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .close-btn {
+    font-size: 16px;
+    padding: 3px 8px;
   }
 }
+
+@media (max-width: 480px) {
+  .modal {
+    width: 98%;
+    max-width: 350px;
+    padding: 12px;
+    max-height: 85vh; // Adjust for mobile screens
+  }
+
+  .modal-content {
+    h2.fee-structure-heading {
+      font-size: 18px;
+    }
+
+    table {
+      font-size: 12px;
+    }
+  }
+
+  .close-btn {
+    font-size: 14px;
+    padding: 3px 6px;
+  }
+}
+
 
 .purchase-modal {
   position: fixed;
@@ -453,7 +519,7 @@
       padding: 10px;
       border: none;
       border-radius: 8px;
-      outline: 2px solid black; // Outline added
+      outline: 2px solid black; 
       font-size: 14px;
       background: rgba(255, 255, 255, 0.9);
       color: black;
@@ -464,7 +530,7 @@
       }
 
       &:focus {
-        outline: 2px solid #ff4b2b; // Highlighted on focus
+        outline: 2px solid #ff4b2b; 
         background: rgba(255, 255, 255, 1);
       }
     }
@@ -559,73 +625,9 @@
 }
 
 
-/* Small devices (mobile phones) */
-@media (max-width: 576px) {
-  .modal-content {
-    width: 95%;
-    padding: 15px;
-    margin-top: 1100px;
 
-    table {
-      font-size: 14px;
 
-      th,
-      td {
-        padding: 8px;
-      }
-    }
 
-    .modal-actions {
-      flex-direction: column;
-
-      align-items: center;
-
-      .buy-btn,
-      .cart-btn {
-        width: 100%;
-
-        padding: 12px;
-
-      }
-    }
-  }
-}
-
-/* Tablets (portrait & landscape) */
-@media (max-width: 768px) {
-  .modal-content {
-    width: 80%;
-    padding: 18px;
-    position: relative;
-    margin-top: 700px;
-
-    table {
-      font-size: 15px;
-
-      th,
-      td {
-        padding: 9px;
-      }
-    }
-
-    .price-actions {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .modal-actions {
-      justify-content: center;
-      gap: 5px;
-
-      .buy-btn,
-      .cart-btn {
-        padding: 10px 12px;
-      }
-    }
-  }
-}
 
 .purchase-confirm-btn {
   margin-right: 60%;
@@ -639,19 +641,7 @@ td {
 }
 
 /* Medium devices (laptops) */
-@media (max-width: 992px) {
-  .modal-content {
-    width: 70%;
-    padding: 20px;
-  }
-}
 
-/* Large devices (desktops) */
-@media (max-width: 1200px) {
-  .modal-content {
-    width: 60%;
-  }
-}
 
 .price-actions {
   display: flex;
@@ -1417,3 +1407,7 @@ h2 {
     padding: 10px;
   }
 }
+
+
+// rewrite
+
