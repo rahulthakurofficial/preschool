@@ -209,12 +209,12 @@ const Home = () => {
             </table>
 
             <div className="modal-actions">
-              <button
+              {/* <button
                 className="close-btn"
                 onClick={() => setIsModalOpen(false)}
               >
                 Close
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
