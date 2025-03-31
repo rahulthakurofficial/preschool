@@ -219,7 +219,6 @@ const Home = () => {
         <div className="purchase-modal">
           <div className="inner-modal-content">
             <h2>Form for {selectedItem.name}</h2>
-
             <label>No. Of Students:</label>
             <select
               value={studentCount}
@@ -229,7 +228,6 @@ const Home = () => {
               <option value="2">2</option>
             </select>
 
-            {/* Dynamically generate input fields for student names */}
             {[...Array(studentCount)].map((_, index) => (
               <input
                 key={index}
@@ -254,8 +252,7 @@ const Home = () => {
 
           <button
             className="purchase-close-btn"
-            onClick={() => setIsPurchaseModalOpen(false)}
-            // style={{ marginLeft: "400px" }}
+            onClick={() => setIsPurchaseModalOpen(false)} 
           >
             ✖
           </button>

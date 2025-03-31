@@ -482,7 +482,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 420px;
+  width: 400px;
   background: white;
   backdrop-filter: blur(15px);
   border-radius: 12px;
@@ -615,7 +615,7 @@
 // Responsive Design
 @media (max-width: 480px) {
   .purchase-modal {
-    width: 90%;
+    width: 80%;
     padding: 20px;
   }
 
@@ -1243,7 +1243,7 @@ h2 {
 }
 
 .testimonial-card p {
-  font-size: 16px;
+  font-size: 24px;
   color: #444;
   margin: 10px 0;
 }
@@ -1263,7 +1263,7 @@ h2 {
 }
 
 .smile-icon {
-  font-size: 22px;
+  font-size: 18px;
   color: #ffcc00;
 }
 
@@ -1274,6 +1274,7 @@ h2 {
   justify-content: center;
   gap: 5px;
   margin-top: 8px;
+  font-size: 22px;
 }
 
 .star {
