@@ -285,6 +285,7 @@ const Home = () => {
         possibilities, ensuring that every child has the chance
         to shine in their own unique way.
         </p>
+        <button class="counseling-btn">Counseling Form</button>
       </div> 
       </div>
 

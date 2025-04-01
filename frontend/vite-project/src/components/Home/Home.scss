@@ -4,6 +4,7 @@
 
 }
 
+
 .admission-banner {
   position: absolute;
   top: 75px;
@@ -774,8 +775,23 @@ td {
 
 .aboutus-text {
   color: black;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: normal;
+}
+.counseling-btn {
+  background-color: #ff6600; /* Bright color for visibility */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 40px;
+}
+
+.counseling-btn:hover {
+  background-color: #cc5500; /* Darker shade on hover */
 }
 
 
