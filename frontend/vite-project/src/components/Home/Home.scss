@@ -772,6 +772,16 @@ td {
   margin-bottom: 10px;
 }
 
+.aboutUs-title {
+  transition: color 0.3s ease-in-out;
+  text-decoration: underline;
+}
+
+.aboutUs-title:hover {
+  text-decoration: underline;
+  color: blue; /* Change to any color you prefer */
+}
+
 
 .aboutus-text {
   color: black;
@@ -828,12 +838,20 @@ td {
 
 .amenities-title {
   font-size: 26px;
-  
   font-weight: bold;
   color: #333;
   margin-bottom: 20px;
 }
+.amenities-title {
+  transition: color 0.3s ease-in-out;
+  text-decoration: underline;
+  font-size: 26px;
+}
 
+.amenities-title:hover {
+  text-decoration: underline;
+  color: blue; 
+}
 .amenities-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -935,6 +953,16 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 20px;
+}
+.key-information{
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  text-decoration: underline;
+}
+
+.key-information:hover {
+  text-decoration: underline;
+  color: blue; /* Change to any color you prefer */
 }
 
 /* Grid Layout */

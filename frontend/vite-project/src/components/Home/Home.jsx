@@ -273,7 +273,7 @@ const Home = () => {
           ></iframe>
         </div>
         <div className="about-section">
-        <h2 className="hover-text">About Us</h2>
+        <h2 className="aboutUs-title">About Us</h2>
         <p class="aboutus-text">
         At Gigglezz Pre-School, we believe that fostering creativity
         is a crucial part of early childhood development. Our thoughtfully 
@@ -295,7 +295,7 @@ const Home = () => {
         style={{ color: "#333", fontSize: "14px" }}
       >
         <div className="key-info">
-          <h2>Key Information</h2>
+        <h2 class="key-information">Key Information</h2>
           <div className="info-grid">
             {[
               { icon: FaVideo, text: "CCTV", value: "Yes" },
