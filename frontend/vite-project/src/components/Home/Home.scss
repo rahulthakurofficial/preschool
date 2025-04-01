@@ -1,6 +1,6 @@
 .preschool-container {
   font-family: Arial, sans-serif;
-  background-color: #222;
+  background-color: white;
 
 }
 
@@ -730,16 +730,8 @@ td {
 .star-icon,
 .half-star {
   font-size: 16px;
-  /* Adjust star size */
   color: gold;
 }
-
-
-
-
-
-
-
 
 /* Base Styles */
 .container {
@@ -751,26 +743,66 @@ td {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   margin-bottom: 20px;
-
   margin-left: 15px;
   margin-right: 15px;
 }
 
-/* Left Side - Iframe */
 .iframe-container {
   flex: 1.2;
-  /* Increased size */
 }
 
 .iframe-container iframe {
   width: 100%;
   height: 381px;
-  /* Increased height */
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Right Side - Amenities */
+.about-section {
+  flex: 1;
+  padding: 20px;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.about-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+
+.aboutus-text {
+  color: black;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .about-section {
+    padding: 15px;
+  }
+
+  .about-section h2 {
+    font-size: 20px;
+  }
+
+}
+
+
+
+
 .amenities-section {
   flex: 1;
   display: flex;
@@ -780,7 +812,7 @@ td {
 
 .amenities-title {
   font-size: 26px;
-  /* Slightly increased */
+  
   font-weight: bold;
   color: #333;
   margin-bottom: 20px;
@@ -790,7 +822,7 @@ td {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  /* Increased gap */
+  
 }
 
 .amenity-card {
@@ -798,7 +830,6 @@ td {
   align-items: center;
   background: #fff;
   padding: 15px 20px;
-  /* Increased padding */
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -811,12 +842,9 @@ td {
 
 .icon {
   font-size: 24px;
-  /* Increased size */
-  // color: #f44336;
   margin-right: 15px;
 }
 
-/* Tablets (max-width: 1024px) */
 @media screen and (max-width: 1024px) {
   .container {
     flex-direction: column;
@@ -826,7 +854,6 @@ td {
   .iframe-container {
     width: 100%;
     height: 400px;
-    /* Increased height */
   }
 
   .amenities-grid {
@@ -834,7 +861,7 @@ td {
   }
 }
 
-/* Mobile Devices (max-width: 768px) */
+
 @media screen and (max-width: 768px) {
   .container {
     padding: 15px;
@@ -843,27 +870,24 @@ td {
   .iframe-container {
     width: 100%;
     height: 500px;
-    /* Increased height */
+  
   }
 
   .amenities-grid {
     grid-template-columns: repeat(2, 1fr);
-    /* Full width for mobile */
+   
   }
 
   .amenity-card {
     text-align: center;
     flex-direction: column;
     padding: 20px;
-    /* Increased padding */
-    // color: red;
+    
   }
 
   .icon {
     margin-bottom: 10px;
     font-size: 26px;
-    /* Larger icon */
-
   }
 }
 

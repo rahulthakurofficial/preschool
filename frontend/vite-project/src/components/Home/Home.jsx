@@ -272,30 +272,20 @@ const Home = () => {
             loading="lazy"
           ></iframe>
         </div>
-
-        {/* Amenities Section */}
-        <div
-          className="amenities-section"
-          style={{ color: "#333", fontSize: "14px" }}
-        >
-          <h2 className="amenities-title">Our Amenities</h2>
-          <div className="amenities-grid">
-            {[
-              { icon: FaTree, text: "Outdoor Playground" },
-              { icon: FaUserTie, text: "Expert Teachers" },
-              { icon: FaBus, text: "School Transport" },
-              { icon: FaMusic, text: "Music & Dance Room" },
-              { icon: FaUtensils, text: "Healthy Snack & Dining Area" },
-              { icon: FaPaintBrush, text: "Art & Craft Zone" },
-              { icon: FaSwimmer, text: "Swimming Pool" },
-              { icon: FaSeedling, text: "Gardening Activities" },
-            ].map(({ icon: Icon, text }, index) => (
-              <div key={index} className="amenity-card">
-                <Icon className="icon" /> {text}
-              </div>
-            ))}
-          </div>
-        </div>
+        <div className="about-section">
+        <h2 className="hover-text">About Us</h2>
+        <p class="aboutus-text">
+        At Gigglezz Pre-School, we believe that fostering creativity
+        is a crucial part of early childhood development. Our thoughtfully 
+        designed activities are aimed at inspiring the imagination and
+        creative expression of every child, helping them explore new
+        ideas and develop their unique talents. We are dedicated to
+        creating an environment where creativity can flourish. Our 
+        activities are designed to be fun, engaging, and full of 
+        possibilities, ensuring that every child has the chance
+        to shine in their own unique way.
+        </p>
+      </div> 
       </div>
 
       {/* Information & Reviews Section */}
@@ -322,7 +312,7 @@ const Home = () => {
         </div>
 
         {/* Reviews Section */}
-        <div
+        {/* <div
           className="reviews"
           style={{ color: "#333", fontSize: "14px" }}
         >
@@ -339,7 +329,30 @@ const Home = () => {
               </div>
             ))}
           </div>
+        </div> */}
+        <div
+          className="amenities-section"
+          style={{ color: "#333", fontSize: "14px" }}
+        >
+          <h2 className="amenities-title">Our Amenities</h2>
+          <div className="amenities-grid">
+            {[
+              { icon: FaTree, text: "Outdoor Playground" },
+              { icon: FaUserTie, text: "Expert Teachers" },
+              { icon: FaBus, text: "School Transport" },
+              { icon: FaMusic, text: "Music & Dance Room" },
+              { icon: FaUtensils, text: "Healthy Snack & Dining Area" },
+              { icon: FaPaintBrush, text: "Art & Craft Zone" },
+              // { icon: FaSwimmer, text: "Swimming Pool" },
+              // { icon: FaSeedling, text: "Gardening Activities" },
+            ].map(({ icon: Icon, text }, index) => (
+              <div key={index} className="amenity-card">
+                <Icon className="icon" /> {text}
+              </div>
+            ))}
+          </div>
         </div>
+        
       </div>
       {/* camp */}
 
