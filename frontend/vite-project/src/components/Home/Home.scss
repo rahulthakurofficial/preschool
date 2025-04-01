@@ -1315,7 +1315,7 @@ h2 {
   margin: 10px 0;
 }
 
-/* Name & Smile Icon */
+
 .name-rating {
   display: flex;
   align-items: center;
@@ -1334,7 +1334,7 @@ h2 {
   color: #ffcc00;
 }
 
-/* ⭐ Star Rating System */
+
 .rating {
   display: flex;
   align-items: center;
@@ -1413,8 +1413,6 @@ h2 {
   text-align: center;
   width: 50%;
   margin: 40px auto 10px;
-  /* Center the form */
-  // margin-bottom: 20px;
 }
 
 .feedback-form form {
@@ -1430,6 +1428,7 @@ h2 {
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 16px;
+  background-color: white;
 }
 
 .feedback-form button {
@@ -1451,7 +1450,7 @@ h2 {
 @media (max-width: 768px) {
   .feedback-form {
     width: 100%;
-    /* Adjust width for tablets */
+   
   }
 }
 
@@ -1459,7 +1458,6 @@ h2 {
 @media (max-width: 480px) {
   .feedback-form {
     width: 100%;
-    /* Full width on small screens */
     padding: 15px;
   }
 
@@ -1475,6 +1473,4 @@ h2 {
   }
 }
 
-
-// rewrite
 
