@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Home.scss";
 import gigglezz from "/src/assets/gigglezz-logo.png";
 import admn from "/src/assets/admn.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
 import {
   FaPhoneAlt,
   FaMapMarkerAlt,
@@ -26,15 +28,6 @@ import {
 import { FaFaceSmile } from "react-icons/fa6";
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const ratingsData = [
-    { text: "Infrastructure", rating: 5, image: "infrastructure.jpg" },
-    { text: "Academics", rating: 4, image: "academics.jpg" },
-    { text: "Faculty", rating: 3, image: "faculty.jpg" },
-    { text: "Safety", rating: 5, image: "safety.jpg" },
-    { text: "Hygiene", rating: 4, image: "hygiene.jpg" },
-    { text: "Activities", rating: 3, image: "activities.jpg" },
-  ];
 
   const [isPurchaseModalOpen, setIsPurchaseModalOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
@@ -63,7 +56,9 @@ const Home = () => {
           <img src={gigglezz} alt="Gigglezz Preschool" />
         </div>
         <div className="details">
-          <h2>Gigglezz Preschool | Bangalore, Karnataka</h2>
+          <h2 className="preschool-header">
+            Gigglezz Preschool | Bangalore, Karnataka
+          </h2>
           <p>
             23, 3rd Cross Rd, Paradise Colony, JP Nagar 7th Phase, Bengaluru
           </p>
@@ -72,13 +67,14 @@ const Home = () => {
             <p class="price">
               Rs 4,548 / Monthly, <span class="emi">EMI Available</span>
             </p>
-            <div class="rating">
-              <span class="star-icon">⭐</span>
-              <span class="star-icon">⭐</span>
-              <span class="star-icon">⭐</span>
-              <span class="star-icon">⭐</span>
-              <span class="half-star">⭐</span>
-              <span class="rating-value">4.5</span>
+
+            <div className="rating">
+              <FontAwesomeIcon icon={faStar} className="star-icon" />
+              <FontAwesomeIcon icon={faStar} className="star-icon" />
+              <FontAwesomeIcon icon={faStar} className="star-icon" />
+              <FontAwesomeIcon icon={faStar} className="star-icon" />
+              <FontAwesomeIcon icon={faStarHalfAlt} className="half-star" />
+              <span className="rating-value">4.5</span>
             </div>
           </div>
         </div>
@@ -107,7 +103,6 @@ const Home = () => {
               className="close-btn"
               onClick={() => setIsModalOpen(false)}
               // style={{ marginLeft: "400px", color: "pink" }}
-
             >
               ✖
             </button>
@@ -209,8 +204,7 @@ const Home = () => {
               </tbody>
             </table>
 
-            <div className="modal-actions">
-            </div>
+            <div className="modal-actions"></div>
           </div>
         </div>
       )}
@@ -252,7 +246,7 @@ const Home = () => {
 
           <button
             className="purchase-close-btn"
-            onClick={() => setIsPurchaseModalOpen(false)} 
+            onClick={() => setIsPurchaseModalOpen(false)}
           >
             ✖
           </button>
@@ -273,29 +267,25 @@ const Home = () => {
           ></iframe>
         </div>
         <div className="about-section">
-        <h2 className="aboutUs-title">About Us</h2>
-        <p class="aboutus-text">
-        At Gigglezz Pre-School, we believe that fostering creativity
-        is a crucial part of early childhood development. Our thoughtfully 
-        designed activities are aimed at inspiring the imagination and
-        creative expression of every child, helping them explore new
-        ideas and develop their unique talents. We are dedicated to
-        creating an environment where creativity can flourish. Our 
-        activities are designed to be fun, engaging, and full of 
-        possibilities, ensuring that every child has the chance
-        to shine in their own unique way.
-        </p>
-        <button class="counseling-btn">Counseling Form</button>
-      </div> 
+          <h2 className="aboutUs-title">About Us</h2>
+          <p class="aboutus-text">
+            At Gigglezz Pre-School, we believe that fostering creativity is a
+            crucial part of early childhood development. Our thoughtfully
+            designed activities are aimed at inspiring the imagination and
+            creative expression of every child, helping them explore new ideas
+            and develop their unique talents. We are dedicated to creating an
+            environment where creativity can flourish. Our activities are
+            designed to be fun, engaging, and full of possibilities, ensuring
+            that every child has the chance to shine in their own unique way.
+          </p>
+          <button class="counseling-btn">Counseling Form</button>
+        </div>
       </div>
 
       {/* Information & Reviews Section */}
-      <div
-        className="info-reviews"
-        style={{ color: "#333", fontSize: "14px" }}
-      >
+      <div className="info-reviews" style={{ color: "#333", fontSize: "14px" }}>
         <div className="key-info">
-        <h2 class="key-information">Key Information</h2>
+          <h2 class="key-information">Key Information</h2>
           <div className="info-grid">
             {[
               { icon: FaVideo, text: "CCTV", value: "Yes" },
@@ -311,26 +301,6 @@ const Home = () => {
             ))}
           </div>
         </div>
-
-        {/* Reviews Section */}
-        {/* <div
-          className="reviews"
-          style={{ color: "#333", fontSize: "14px" }}
-        >
-          <h2>Reviews</h2>
-          <div className="ratings">
-            {ratingsData.map(({ text, rating }, index) => (
-              <div key={index} className="rating-card">
-                <div className="smiley-rating">
-                  {[...Array(rating)].map((_, i) => (
-                    <FaFaceSmile key={i} className="smile-icon" />
-                  ))}
-                </div>
-                <span>{text}</span>
-              </div>
-            ))}
-          </div>
-        </div> */}
         <div
           className="amenities-section"
           style={{ color: "#333", fontSize: "14px" }}
@@ -353,7 +323,6 @@ const Home = () => {
             ))}
           </div>
         </div>
-        
       </div>
       {/* camp */}
 

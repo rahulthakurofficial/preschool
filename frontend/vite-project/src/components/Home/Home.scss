@@ -52,12 +52,16 @@
   margin-bottom: 20px;
 
 }
-
-
+.preschool-header {
+  // font-size: 3.5rem; 
+  font-family: 'Poppins', sans-serif; 
+  letter-spacing: 1px;   
+  text-transform: capitalize;
+  font-size: large;
+}
 .logo img {
   width: 70px;
 }
-
 
 .details {
   flex-grow: 1;
@@ -89,30 +93,37 @@
 .map-btn {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 18px;
   padding: 8px 12px;
-  border: 2px solid #00c4cc;
+  border: 1px solid #00c4cc;
   border-radius: 5px;
   background-color: white;
   color: #00c4cc;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-left: 50px;
+  font-weight: normal;
 }
 
 .call-btn {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 18px;
   padding: 8px 12px;
-  border: 2px solid #00c4cc;
+  border: 1px solid #00c4cc;
   border-radius: 5px;
   background-color: white;
   color: #00c4cc;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-left: 20px;
+  font-weight: normal;
 }
+.thin-icon {
+  font-size: 14px; /* Adjust size as needed */
+  
+}
+
 
 .map-btn:hover,
 .call-btn:hover {
@@ -767,11 +778,9 @@ td {
 .aboutUs-title {
   transition: color 0.3s ease-in-out;
   text-decoration: underline;
-}
-
-.aboutUs-title:hover {
-  text-decoration: underline;
-  color: blue; 
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif; 
+  letter-spacing: 1px;
 }
 
 .aboutus-text {
@@ -780,7 +789,7 @@ td {
   font-weight: normal;
 }
 .counseling-btn {
-  background-color: #ff6600; /* Bright color for visibility */
+  background-color: #ff6600; 
   color: white;
   padding: 10px 20px;
   border: none;
@@ -832,17 +841,20 @@ td {
   font-weight: bold;
   color: #333;
   margin-bottom: 20px;
+
 }
 .amenities-title {
   transition: color 0.3s ease-in-out;
   text-decoration: underline;
   font-size: 26px;
+  transition: color 0.3s ease-in-out;
+  text-decoration: underline;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif; 
+  letter-spacing: 1px;
 }
 
-.amenities-title:hover {
-  text-decoration: underline;
-  color: blue; 
-}
+
 .amenities-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -866,7 +878,7 @@ td {
 }
 
 .icon {
-  font-size: 24px;
+  // font-size: 20px;
   margin-right: 15px;
 }
 
@@ -912,7 +924,7 @@ td {
 
   .icon {
     margin-bottom: 10px;
-    font-size: 26px;
+    font-size: 2px;
   }
 }
 
@@ -949,12 +961,14 @@ h2 {
   text-decoration: none;
   transition: color 0.3s ease-in-out;
   text-decoration: underline;
+  transition: color 0.3s ease-in-out;
+  text-decoration: underline;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif; 
+  letter-spacing: 1px;
 }
 
-.key-information:hover {
-  text-decoration: underline;
-  color: blue; /* Change to any color you prefer */
-}
+
 
 /* Grid Layout */
 .info-grid {
