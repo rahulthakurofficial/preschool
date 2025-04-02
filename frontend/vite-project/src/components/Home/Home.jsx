@@ -167,7 +167,7 @@ const Home = () => {
               <thead>
                 <tr>
                   <th>Service</th>
-                  <th>Price (₹)</th>
+                  <th>Admission Fee (₹)</th>
                   <th>Discounted Fee (₹)</th>
                   <th>Actions</th>
                 </tr>
