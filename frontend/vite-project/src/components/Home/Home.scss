@@ -881,6 +881,43 @@ td {
   // font-size: 20px;
   margin-right: 15px;
 }
+.amenities-header {
+  display: flex;
+  align-items: center; 
+}
+
+.amenities-icon {
+  margin-right: 10px; 
+  width: 40px; 
+  height: auto;
+  margin-bottom: 10px;
+}
+.icon-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2em;
+}
+.amenity-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.6rem;
+  padding: 14px;
+}
+
+.amenity-icon {
+  width: 40px;
+  height: 40px;
+}
+
+
 
 @media screen and (max-width: 1024px) {
   .container {
@@ -967,6 +1004,24 @@ h2 {
   font-family: 'Poppins', sans-serif; 
   letter-spacing: 1px;
 }
+
+.key-info-container {
+  display: flex;
+  align-items: center; /* Aligns image & text vertically */
+  gap: 10px; /* Space between image and text */
+}
+
+.key-icon {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 15px;
+}
+
+.key-information {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 
 
 

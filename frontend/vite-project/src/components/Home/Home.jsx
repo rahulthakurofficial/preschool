@@ -4,22 +4,28 @@ import gigglezz from "/src/assets/gigglezz-logo.png";
 import admn from "/src/assets/admn.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
+import searchIcon from "../../assets/information.png";
+import amenitiesIcon from "../../assets/amenities.png";
+import cctvImg from "../../assets/cctv.png";
+import daycareImg from "../../assets/daycare.png";
+import sportsImg from "../../assets/sports.png";
+import minAgeImg from "../../assets/min-age.png";
+import maxAgeImg from "../../assets/max-age.png";
+import mealsImg from "../../assets/healthy-meal.png";
+import playgroundImg from "../../assets/playground.png";
+import teacherImg from "../../assets/teacher.png";
+import transportImg from "../../assets/transport.png";
+import musicImg from "../../assets/fan.png";
+import diningImg from "../../assets/dining.png";
+import artImg from "../../assets/art.png";
+
+
 import {
   FaPhoneAlt,
   FaMapMarkerAlt,
   FaHeart,
   FaShareAlt,
-  FaTree,
-  FaUserTie,
-  FaBus,
-  FaMusic,
-  FaUtensils,
-  FaPaintBrush,
-  FaSwimmer,
-  FaSeedling,
-  FaVideo,
-  FaChild,
-  FaRunning,
+ 
   FaSmile,
   FaQuoteLeft,
   FaUserCircle,
@@ -285,18 +291,26 @@ const Home = () => {
       {/* Information & Reviews Section */}
       <div className="info-reviews" style={{ color: "#333", fontSize: "14px" }}>
         <div className="key-info">
-          <h2 class="key-information">Key Information</h2>
+          <a></a>
+
+          <div className="key-info-container">
+            <img src={searchIcon} alt="Search Icon" className="key-icon" />
+            <h2 className="key-information">Key Information</h2>
+          </div>
+
+       
           <div className="info-grid">
             {[
-              { icon: FaVideo, text: "CCTV", value: "Yes" },
-              { icon: FaChild, text: "Day & Night Care", value: "Yes" },
-              { icon: FaRunning, text: "Outdoor Sports", value: "Yes" },
-              { icon: FaChild, text: "Minimum Age", value: "02 Years" },
-              { icon: FaChild, text: "Maximum Age", value: "06 Years" },
-              { icon: FaUtensils, text: "Meals Provided", value: "Yes" },
-            ].map(({ icon: Icon, text, value }, index) => (
+              { image: cctvImg, text: "CCTV", value: "Yes" },
+              { image: daycareImg, text: "Day & Night Care", value: "Yes" },
+              { image: sportsImg, text: "Outdoor Sports", value: "Yes" },
+              { image: minAgeImg, text: "Minimum Age", value: "02 Years" },
+              { image: maxAgeImg, text: "Maximum Age", value: "06 Years" },
+              { image: mealsImg, text: "Meals Provided", value: "Yes" },
+            ].map(({ image, text, value }, index) => (
               <div key={index} className="info-card">
-                <Icon className="icon" /> {text} <span>{value}</span>
+                <img src={image} alt={text} className="icon-image" />
+                {text} <span>{value}</span>
               </div>
             ))}
           </div>
@@ -305,20 +319,27 @@ const Home = () => {
           className="amenities-section"
           style={{ color: "#333", fontSize: "14px" }}
         >
-          <h2 className="amenities-title">Our Amenities</h2>
+          <div className="amenities-header">
+            <img
+              src={amenitiesIcon}
+              alt="Amenities Icon"
+              className="amenities-icon"
+            />
+            <h2 className="amenities-title">Our Amenities</h2>
+          </div>
+          
           <div className="amenities-grid">
             {[
-              { icon: FaTree, text: "Outdoor Playground" },
-              { icon: FaUserTie, text: "Expert Teachers" },
-              { icon: FaBus, text: "School Transport" },
-              { icon: FaMusic, text: "Music & Dance Room" },
-              { icon: FaUtensils, text: "Healthy Snack & Dining Area" },
-              { icon: FaPaintBrush, text: "Art & Craft Zone" },
-              // { icon: FaSwimmer, text: "Swimming Pool" },
-              // { icon: FaSeedling, text: "Gardening Activities" },
-            ].map(({ icon: Icon, text }, index) => (
+              { image: playgroundImg, text: "Outdoor Playground" },
+              { image: teacherImg, text: "Expert Teachers" },
+              { image: transportImg, text: "School Transport" },
+              { image: musicImg, text: "Music & Dance Room" },
+              { image: diningImg, text: "Healthy Snack & Dining Area" },
+              { image: artImg, text: "Art & Craft Zone" },
+            ].map(({ image, text }, index) => (
               <div key={index} className="amenity-card">
-                <Icon className="icon" /> {text}
+                <img src={image} alt={text} className="amenity-icon" />
+                {text}
               </div>
             ))}
           </div>
