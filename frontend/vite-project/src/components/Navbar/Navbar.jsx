@@ -6,11 +6,7 @@ import { Menu, Dropdown } from "antd";
 import { FaGlobe, FaUser } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 
-
-
 import { GiHamburgerMenu } from "react-icons/gi";
-
-
 
 const Navbar = () => {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
@@ -27,8 +23,15 @@ const Navbar = () => {
       <Menu.Item key="Punjabi">Kannada</Menu.Item>
     </Menu>
   );
+  const [showFields, setShowFields] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
 
- 
+  const handleInputClick = () => {
+    setShowFields(true);
+  };
+
   return (
     <>
       <nav className="main-nav">
@@ -36,7 +39,7 @@ const Navbar = () => {
         <div className="logo">
           <h2>
             <div className="logo">
-              <img src={letzstepinImg} alt="Logo" className="logo-img"  />
+              <img src={letzstepinImg} alt="Logo" className="logo-img" />
             </div>
           </h2>
         </div>
@@ -60,22 +63,42 @@ const Navbar = () => {
                 </button>
               </div>
             </li>
+
             <li>
               <div className="gps-search-container">
                 <input
                   type="text"
                   placeholder="Search location..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onClick={handleInputClick}
                   className="gps-search-input"
                 />
                 <button className="gps-search-btn">
                   <FaMapMarkerAlt className="gps-icon" />
                 </button>
               </div>
+
+              {/* Dropdown input fields */}
+              {showFields && (
+                <div className="dropdown-inputs">
+                  <input
+                    type="text"
+                    placeholder="Enter City"
+                    value={city}
+                    onChange={(e) => setCity(e.target.value)}
+                    className="dropdown-input"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Enter State"
+                    value={state}
+                    onChange={(e) => setState(e.target.value)}
+                    className="dropdown-input"
+                  />
+                </div>
+              )}
             </li>
-            {/* <li>
-              Register School
-            </li> */}
-          {/* <li style={{ fontSize: "25px" }}>Blog</li> */}
 
             <li>
               {/* <NavLink to="/contact">contact</NavLink> */}
@@ -91,9 +114,8 @@ const Navbar = () => {
               </Dropdown>
             </li>
             <li>
-               <FaShoppingCart className="cart-icon" size={50}/>
+              <FaShoppingCart className="cart-icon" size={50} />
             </li>
-
           </ul>
         </div>
 

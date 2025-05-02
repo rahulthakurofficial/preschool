@@ -29,7 +29,7 @@
 
 .logo-img {
   height: 65px;
-  width: 75px;
+  width: 95px;
 }
 
 .search-container,
@@ -129,7 +129,7 @@
 
   .logo-img {
       height: 50px;
-      width: 60px;
+      width: 80px;
   }
 
   .search-container,
@@ -389,3 +389,39 @@ li {
   }
 }
 
+.gps-search-container {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  position: relative;
+}
+
+.gps-search-input {
+  padding: 8px;
+  width: 200px;
+}
+
+.gps-search-btn {
+  padding: 8px;
+ 
+  color: white;
+  border: none;
+}
+
+.gps-icon {
+  font-size: 14px;
+}
+
+.dropdown-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  gap: 8px;
+}
+
+.dropdown-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  border-radius: 8px;
+}

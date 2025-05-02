@@ -19,13 +19,11 @@ import musicImg from "../../assets/fan.png";
 import diningImg from "../../assets/dining.png";
 import artImg from "../../assets/art.png";
 
-
 import {
   FaPhoneAlt,
   FaMapMarkerAlt,
   FaHeart,
   FaShareAlt,
- 
   FaSmile,
   FaQuoteLeft,
   FaUserCircle,
@@ -34,7 +32,6 @@ import {
 import { FaFaceSmile } from "react-icons/fa6";
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const [isPurchaseModalOpen, setIsPurchaseModalOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const [cart, setCart] = useState({});
@@ -53,63 +50,11 @@ const Home = () => {
 
   return (
     <div className="preschool-container">
-      {/* Preschool Card */}
-      <div className="preschool-card">
-        <div className="admission-banner">
-          <img src={admn} alt="Admission Open" />
-        </div>
-        <div className="logo">
-          <img src={gigglezz} alt="Gigglezz Preschool" />
-        </div>
-        <div className="details">
-          <h2 className="preschool-header">
-            Gigglezz Preschool | Bangalore, Karnataka
-          </h2>
-          <p>
-            23, 3rd Cross Rd, Paradise Colony, JP Nagar 7th Phase, Bengaluru
-          </p>
-
-          <div class="price-rating-container">
-            <p class="price">
-              Rs 4,548 / Monthly, <span class="emi">EMI Available</span>
-            </p>
-
-            <div className="rating">
-              <FontAwesomeIcon icon={faStar} className="star-icon" />
-              <FontAwesomeIcon icon={faStar} className="star-icon" />
-              <FontAwesomeIcon icon={faStar} className="star-icon" />
-              <FontAwesomeIcon icon={faStar} className="star-icon" />
-              <FontAwesomeIcon icon={faStarHalfAlt} className="half-star" />
-              <span className="rating-value">4.5</span>
-            </div>
-          </div>
-        </div>
-        <div className="actions">
-          <button className="map-btn">
-            <FaMapMarkerAlt className="icon" /> Show on Map
-          </button>
-          <button className="call-btn">
-            <FaPhoneAlt className="icon" /> Book Now
-          </button>
-          <button className="call-btn" onClick={() => setIsModalOpen(true)}>
-            <FaRupeeSign className="icon" /> View Fee Structure
-          </button>
-        </div>
-        <div className="icons">
-          <FaHeart className="heart-icon" />
-          <FaShareAlt className="share-icon" />
-        </div>
-      </div>
-
       {/* Modal for Fee Structure */}
       {isModalOpen && (
         <div className="modal" style={{ color: "white", fontSize: "13px" }}>
           <div className="modal-content">
-            <button
-              className="close-btn"
-              onClick={() => setIsModalOpen(false)}
-              // style={{ marginLeft: "400px", color: "pink" }}
-            >
+            <button className="close-btn" onClick={() => setIsModalOpen(false)}>
               ✖
             </button>
             <h2 className="fee-structure-heading">Fee Structure</h2>
@@ -272,6 +217,7 @@ const Home = () => {
             loading="lazy"
           ></iframe>
         </div>
+
         <div className="about-section">
           <h2 className="aboutUs-title">About Us</h2>
           <p class="aboutus-text">
@@ -284,12 +230,17 @@ const Home = () => {
             designed to be fun, engaging, and full of possibilities, ensuring
             that every child has the chance to shine in their own unique way.
           </p>
-          <button class="counseling-btn">Counseling Form</button>
+          <div className="action-buttons">
+            <button className="btn-counseling">Counseling Form</button>
+            <button className="btn-fee" onClick={() => setIsModalOpen(true)}>
+              <FaRupeeSign className="rupee-icon" /> View Fee Structure
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Information & Reviews Section */}
-      <div className="info-reviews" style={{ color: "#333", fontSize: "14px" }}>
+      <div className="info-reviews" style={{ color: "#333",background:"white", fontSize: "14px" }}>
         <div className="key-info">
           <a></a>
 
@@ -298,7 +249,6 @@ const Home = () => {
             <h2 className="key-information">Key Information</h2>
           </div>
 
-       
           <div className="info-grid">
             {[
               { image: cctvImg, text: "CCTV", value: "Yes" },
@@ -327,7 +277,7 @@ const Home = () => {
             />
             <h2 className="amenities-title">Our Amenities</h2>
           </div>
-          
+
           <div className="amenities-grid">
             {[
               { image: playgroundImg, text: "Outdoor Playground" },
