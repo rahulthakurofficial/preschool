@@ -331,7 +331,7 @@ const Home = () => {
       </div>
 
       <div class="explore-section">
-        <h2 class="section-title">Explore More Preschools Near You</h2>
+        <h2 class="section-title">Explore More Preschools Near Me</h2>
         <div class="explore-container">
           <div class="explore-card">
             <img src={footerpreschool} alt="Amenities Icon" />
