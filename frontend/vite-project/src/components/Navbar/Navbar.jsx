@@ -1,135 +1,52 @@
 import React, { useState } from "react";
-import "./Navbar.scss";
-import { FaSearch, FaMapMarkerAlt } from "react-icons/fa";
-import letzstepinImg from "../../assets/let_image.png";
-import { Menu, Dropdown } from "antd";
-import { FaGlobe, FaUser } from "react-icons/fa";
-import { FaShoppingCart } from "react-icons/fa";
+import '../Navbar/Navbar.scss';
+import { FaSearch, FaChevronDown, FaShoppingCart } from "react-icons/fa";
 
-import { GiHamburgerMenu } from "react-icons/gi";
+ import letzstepin_logo from "../../assets/letzstepin_logo.png";
 
 const Navbar = () => {
-  const [showMediaIcons, setShowMediaIcons] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("English");
 
-  const handleMenuClick = (e) => {
-    setSelectedLanguage(e.key);
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const toggleDropdown = () => {
+    setShowDropdown((prev) => !prev);
   };
 
-  const languageMenu = (
-    <Menu onClick={handleMenuClick}>
-      <Menu.Item key="English">English</Menu.Item>
-      <Menu.Item key="Hindi">Hindi</Menu.Item>
-      <Menu.Item key="Punjabi">Kannada</Menu.Item>
-    </Menu>
-  );
-  const [showFields, setShowFields] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [city, setCity] = useState("");
-  const [state, setState] = useState("");
-
-  const handleInputClick = () => {
-    setShowFields(true);
-  };
+ 
 
   return (
-    <>
-      <nav className="main-nav">
-        {/* 1st logo part  */}
-        <div className="logo">
-          <h2>
-            <div className="logo">
-              <img src={letzstepinImg} alt="Logo" className="logo-img" />
-            </div>
-          </h2>
+    <nav className="navbar">
+     <div className="logo">
+      <img src={letzstepin_logo} alt="Logo" />
+    </div>
+
+
+      <div className="input-group">
+        {/* Search Input */}
+        <div className="input-wrapper">
+          <FaSearch className="icon" />
+          <input type="text" placeholder="Search..." />
         </div>
 
-        {/* 2nd menu part  */}
-        <div
-          className={
-            showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
-          }
-        >
-          <ul>
-            <li>
-              <div className="search-container">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  className="search-input"
-                />
-                <button className="search-btn">
-                  <FaSearch className="search-icon" />
-                </button>
-              </div>
-            </li>
-
-            <li>
-              <div className="gps-search-container">
-                <input
-                  type="text"
-                  placeholder="Search location..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  onClick={handleInputClick}
-                  className="gps-search-input"
-                />
-                <button className="gps-search-btn">
-                  <FaMapMarkerAlt className="gps-icon" />
-                </button>
-              </div>
-
-              {/* Dropdown input fields */}
-              {showFields && (
-                <div className="dropdown-inputs">
-                  <input
-                    type="text"
-                    placeholder="Enter City"
-                    value={city}
-                    onChange={(e) => setCity(e.target.value)}
-                    className="dropdown-input"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Enter State"
-                    value={state}
-                    onChange={(e) => setState(e.target.value)}
-                    className="dropdown-input"
-                  />
-                </div>
-              )}
-            </li>
-
-            <li>
-              {/* <NavLink to="/contact">contact</NavLink> */}
-              <Dropdown
-                overlay={languageMenu}
-                trigger={["click"]}
-                placement="bottomRight"
-              >
-                <div className="language-selector">
-                  <FaGlobe className="language-icon" />
-                  <span>{selectedLanguage}</span>
-                </div>
-              </Dropdown>
-            </li>
-            <li>
-              <FaShoppingCart className="cart-icon" size={50} />
-            </li>
-          </ul>
-        </div>
-
-        {/* 3rd social media links */}
-        <div className="social-media">
-          {/* hamburget menu start  */}
-          <div className="hamburger-menu">
-            <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
-              <GiHamburgerMenu />
-            </a>
+      
+        <div className="dropdown-wrapper">
+          <div className="dropdown-header" onClick={toggleDropdown}>
+            <input type="text" placeholder="Select Location" readOnly />
+            <FaChevronDown className="icon" />
           </div>
+
+          {showDropdown && (
+            <div className="dropdown-menu">
+              <input type="text" placeholder="My Current Location" />
+              <input type="text" placeholder="GPS Tracker" />
+            </div>
+          )}
         </div>
-      </nav>
-    </>
+      
+
+    
+      </div>
+    </nav>
   );
 };
 
