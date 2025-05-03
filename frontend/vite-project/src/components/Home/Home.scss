@@ -3,6 +3,87 @@
   background-color: white;
 
 }
+.preschool-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #fbb03b, #f44336);
+  padding: 20px 40px;
+  border-radius: 12px;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  // border: 2px solid white;
+}
+
+.title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 14px;
+  margin: 2px 0;
+  color: #fffde7;
+}
+
+.header-right {
+  text-align: right;
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.enroll-btn {
+  margin-top: 8px;
+  padding: 8px 16px;
+  background-color: #fff;
+  color: #f44336;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.enroll-btn:hover {
+  background-color: #f44336;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .preschool-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-right {
+    margin-top: 15px;
+  }
+
+  .header-left {
+    flex-direction: column;
+  }
+}
+
 
 .modal {
   position: fixed;

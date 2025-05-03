@@ -53,6 +53,27 @@ const Home = () => {
 
   return (
     <div className="preschool-container">
+      <header className="preschool-header">
+        <div className="header-left">
+          <img src={gigglezz} alt="Preschool Logo" className="logo" />
+          <div>
+            <h1 className="title">Gigglezz Preschool</h1>
+            <p className="tagline">Where Learning Begins with Laughter!</p>
+          </div>
+        </div>
+
+        <div className="header-right">
+          <div className="contact-info">
+            <p>
+              <strong>📞</strong> +91-9876543210
+            </p>
+            <p>
+              <strong>📧</strong> gigglezz@preschool.com
+            </p>
+          </div>
+          <button className="enroll-btn">Enroll Now</button>
+        </div>
+      </header>
       {/* Modal for Fee Structure */}
       {isModalOpen && (
         <div className="modal" style={{ color: "white", fontSize: "13px" }}>
