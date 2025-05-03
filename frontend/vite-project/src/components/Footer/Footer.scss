@@ -1,6 +1,7 @@
 .footer {
-  background-color: black;
-  color: #fff;
+  // background-image: url('../../assets/footerpreschool.jpg');
+  background-color: lightblue;
+  color: black;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
   width: 100%;
@@ -23,7 +24,7 @@
 
       p {
         font-size: 16px;
-        color: #ccc;
+        color: black;
         line-height: 1.6;
       }
     }
@@ -31,12 +32,12 @@
     .about {
       h2 {
         font-size: 28px;
-        color: white;
+        color: black;
         margin-bottom: 20px;
       }
 
       p {
-        color: white;
+        color: black;
         font-size: 16px;
       }
     }
@@ -55,7 +56,7 @@
         gap: 15px;
 
         a {
-          color: #fff;
+          color: black;
           font-size: 20px;
           transition: color 0.3s;
 
@@ -71,7 +72,7 @@
     text-align: center;
     margin-top: 30px;
     font-size: 14px;
-    color: #aaa;
+    color: black;
 
     p {
       margin: 0;

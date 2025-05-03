@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Home.scss";
 import gigglezz from "/src/assets/gigglezz-logo.png";
 import admn from "/src/assets/admn.png";
@@ -47,6 +47,9 @@ const Home = () => {
     });
   };
   const [studentCount, setStudentCount] = useState(1);
+
+ 
+  
 
   return (
     <div className="preschool-container">
@@ -240,7 +243,10 @@ const Home = () => {
       </div>
 
       {/* Information & Reviews Section */}
-      <div className="info-reviews" style={{ color: "#333",background:"white", fontSize: "14px" }}>
+      <div
+        className="info-reviews"
+        style={{ color: "#333", background: "white", fontSize: "14px" }}
+      >
         <div className="key-info">
           <a></a>
 
@@ -295,60 +301,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* camp */}
+      
 
-      {/* Testimonials Section */}
-      <div className="testimonials">
-        <h2 className="parent-testimonials">What Parents Say</h2>
-
-        <div className="testimonial-grid">
-          {[
-            {
-              avatar: FaUserCircle,
-              name: "Amit Sharma",
-              text: "Excellent school! My child loves it.",
-              rating: 5,
-            },
-            {
-              avatar: FaUserCircle,
-              name: "Rahul",
-              text: "Great staff and amazing facilities!",
-              rating: 4,
-            },
-          ].map(({ avatar: Avatar, name, text, rating }, index) => (
-            <div key={index} className="testimonial-card">
-              <Avatar className="avatar" />
-              <FaQuoteLeft className="quote-icon" />
-              <p>{text}</p>
-
-              <div className="name-rating">
-                <h4>{name}</h4>
-                <FaSmile className="smile-icon" />
-              </div>
-
-              <div className="rating">
-                {[...Array(5)].map((_, i) => (
-                  <FaSmile
-                    key={i}
-                    className={i < rating ? "smile filled" : "smile"}
-                  />
-                ))}
-                <span className="rating-score">{rating}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Feedback Form */}
-      <div className="feedback-form">
-        <h2>Leave Your Feedback</h2>
-        <form>
-          <input type="text" placeholder="Your Name" required />
-          <textarea placeholder="Your Feedback" required></textarea>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+    
+      
     </div>
   );
 };
