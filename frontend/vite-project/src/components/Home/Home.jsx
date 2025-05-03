@@ -21,6 +21,7 @@ import artImg from "../../assets/art.png";
 import footerpreschool from "../../assets/footerpreschool.jpg";
 import preschoolimg from "../../assets/preschoolimg.avif";
 import preschoolimages from "../../assets/preschoolimages.jpg";
+import testimonialImg from '../../assets/testimonialimg.png'; 
 
 import {
   FaPhoneAlt,
@@ -65,7 +66,7 @@ const Home = () => {
         <div className="header-right">
           <div className="contact-info">
             <p>
-              <strong>📞</strong> +91-9876543210
+              <strong>📞</strong> +91-7620005311
             </p>
             <p>
               <strong>📧</strong> gigglezz@preschool.com

@@ -1185,6 +1185,19 @@ h2 {
     width: 90%;
   }
 }
+.testimonial-heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 30px;
+  // background-color: #fef3e2;
+  border-radius: 12px;
+  animation: fadeInLeft 1s ease-in-out;
+  // box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+
 .explore-section {
   background: linear-gradient(to right, #e0f7fa, #fce4ec);
   padding: 60px 20px;
