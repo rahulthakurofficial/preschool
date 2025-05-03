@@ -946,7 +946,7 @@ h2 {
 }
 
 
-// Testimonial & feedback 
+
 .info-reviews {
   display: flex;
   gap: 40px;
@@ -1018,212 +1018,197 @@ h2 {
 }
 
 
-
-.testimonials {
-  margin-top: 40px;
+.testimonial-section {
+  background: linear-gradient(to right, #ffe8ec, #e6f7ff);
+  padding: 60px 20px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   text-align: center;
-  padding: 0 20px;
+  font-family: Arial, sans-serif;
 }
 
-.parent-testimonials {
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  color: white;
-  margin-bottom: 20px;
+.section-title {
+  font-size: 36px;
+  color: #f44336;
+  margin-bottom: 40px;
+  animation: slideInDown 1s ease;
 }
 
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-/* Testimonial Card */
 .testimonial-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  position: relative;
-  transition: transform 0.3s ease;
+  background-color: #fff;
+  border: 2px dashed #fbc02d;
+  border-radius: 20px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .testimonial-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 }
 
-.avatar {
-  font-size: 40px;
-  color: #555;
-  margin-bottom: 10px;
+.message {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
 
-.quote-icon {
-  font-size: 20px;
+.author {
+  font-weight: bold;
   color: #f44336;
+  font-size: 16px;
 }
 
-.testimonial-card p {
-  font-size: 24px;
-  color: #444;
-  margin: 10px 0;
-}
-
-
-.name-rating {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.name-rating h4 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #222;
-}
-
-.smile-icon {
-  font-size: 18px;
-  color: #ffcc00;
-}
-
-
-.rating {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  margin-top: 8px;
-  font-size: 22px;
-}
-
-.star {
-  font-size: 18px;
-  color: #ddd;
-}
-
-.filled {
-  color: #ffcc00;
-  /* Gold color for filled stars */
-}
-
-.rating-score {
-  font-size: 14px;
-  font-weight: bold;
-  color: #444;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .testimonial-grid {
-    grid-template-columns: repeat(2, 1fr);
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 480px) {
-  .testimonial-grid {
-    grid-template-columns: repeat(1, 1fr);
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
   }
 
   .testimonial-card {
-    padding: 15px;
-    font-size: 14px;
-  }
-
-  .avatar {
-    font-size: 30px;
-  }
-
-  .quote-icon {
-    font-size: 16px;
-  }
-
-  .testimonial-card p {
-    font-size: 14px;
-  }
-
-  .name-rating h4 {
-    font-size: 16px;
-  }
-
-  .smile-icon {
-    font-size: 18px;
-  }
-
-  .star {
-    font-size: 16px;
+    width: 90%;
   }
 }
-
-
-/* Feedback Form */
-.feedback-form {
-  margin-top: 40px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.explore-section {
+  background: linear-gradient(to right, #e0f7fa, #fce4ec);
+  padding: 60px 20px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   text-align: center;
-  width: 50%;
-  margin: 40px auto 10px;
 }
 
-.feedback-form form {
+.section-title {
+  font-size: 36px;
+  color: #ff4081;
+  margin-bottom: 40px;
+  animation: slideInDown 1s ease;
+}
+
+.explore-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.explore-card {
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
 }
 
-.feedback-form input,
-.feedback-form textarea {
+.explore-card img {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.explore-card h3 {
+  font-size: 22px;
+  color: #0097a7;
+  margin: 15px 0 10px;
+}
+
+.explore-card p {
   font-size: 16px;
-  background-color: white;
+  color: #444;
+  padding: 0 15px;
+  margin-bottom: 20px;
 }
 
-.feedback-form button {
-  padding: 12px;
-  background: #f44336;
-  color: white;
+.explore-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.explore-btn {
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+  background-color: #ff4081;
   border: none;
-  border-radius: 8px;
+  color: white;
+  padding: 10px 20px;
+  // font-weight: bold;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 18px;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.feedback-form button:hover {
-  background: #d32f2f;
+.explore-btn:hover {
+  background-color: #e91e63;
 }
 
-/* Tablet View */
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .feedback-form {
-    width: 100%;
-  }
-}
-
-/* Mobile View */
-@media (max-width: 480px) {
-  .feedback-form {
-    width: 100%;
-    padding: 15px;
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .feedback-form input,
-  .feedback-form textarea {
-    font-size: 14px;
-    /* Adjust font size */
-  }
-
-  .feedback-form button {
-    font-size: 16px;
-    padding: 10px;
+  .explore-card {
+    width: 90%;
   }
 }

@@ -18,6 +18,9 @@ import transportImg from "../../assets/transport.png";
 import musicImg from "../../assets/fan.png";
 import diningImg from "../../assets/dining.png";
 import artImg from "../../assets/art.png";
+import footerpreschool from "../../assets/footerpreschool.jpg";
+import preschoolimg from "../../assets/preschoolimg.avif";
+import preschoolimages from "../../assets/preschoolimages.jpg";
 
 import {
   FaPhoneAlt,
@@ -47,9 +50,6 @@ const Home = () => {
     });
   };
   const [studentCount, setStudentCount] = useState(1);
-
- 
-  
 
   return (
     <div className="preschool-container">
@@ -301,10 +301,63 @@ const Home = () => {
           </div>
         </div>
       </div>
-      
 
-    
-      
+      <div class="testimonial-section">
+        <h2 class="section-title">What Parents Say</h2>
+        <div class="testimonial-container">
+          <div class="testimonial-card">
+            <p class="message">
+              "This preschool is amazing! My child loves the teachers and
+              activities."
+            </p>
+            <div class="author">– Rahul, Parent</div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="message">
+              "Warm, welcoming, and educational – highly recommended!"
+            </p>
+            <div class="author">– Abhishek, Parent</div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="message">
+              "My daughter learned so much while having fun. The best preschool
+              in town!"
+            </p>
+            <div class="author">– Anita, Parent</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="explore-section">
+        <h2 class="section-title">Explore More Preschools Near You</h2>
+        <div class="explore-container">
+          <div class="explore-card">
+            <img src={footerpreschool} alt="Amenities Icon" />
+
+            <h3>Little Sunshine Academy</h3>
+            <p>Rated 4.8 ★ – Safe, nurturing & fun learning space!</p>
+            <button class="explore-btn">View Details</button>
+          </div>
+
+          <div class="explore-card">
+            <img src={preschoolimg} alt="Amenities Icon" />
+
+            <h3>Happy Tots Preschool</h3>
+            <p>Modern facilities with creative curriculum programs.</p>
+            <button class="explore-btn">View Details</button>
+          </div>
+
+          <div class="explore-card">
+            <img src={preschoolimages} alt="Amenities Icon" />
+
+            <h3>Smart Steps Preschool</h3>
+            <p>Friendly staff and playful educational environment.</p>
+            <button class="explore-btn">View Details</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
