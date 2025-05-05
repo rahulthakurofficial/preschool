@@ -740,22 +740,6 @@ td {
   }
 }
 
-
-
-
-/* Base Styles */
-// .info-reviews {
-//   display: flex;
-//   gap: 40px;
-//   padding: 30px;
-
-//   background: white;
-//   border-radius: 15px;
-//   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-//   overflow: visible;
- 
-// }
-
 .key-info,
 .reviews {
   flex: 1;
@@ -865,9 +849,7 @@ h2 {
   gap: 20px;
 }
 
-/* MEDIA QUERIES */
 
-/* Large Screens (Desktops & Laptops) */
 @media screen and (min-width: 1025px) {
   .info-reviews {
     padding: 40px;
@@ -1039,14 +1021,14 @@ h2 {
   margin-right: 15px;
 }
 
-/* Key Information & Reviews Section */
+
 .key-info,
 .reviews {
   flex: 1;
   padding: 20px;
 }
 
-/* Headings */
+
 h2 {
   font-size: 26px;
   font-weight: bold;
@@ -1056,14 +1038,14 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Info Grid */
+
 .info-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
-/* Cards */
+
 .info-card,
 .rating-card {
   display: flex;
@@ -1076,25 +1058,25 @@ h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect */
+
 .info-card:hover,
 .rating-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Smile Icon */
+
 .icon {
   font-size: 24px;
   color: cyan;
   margin-right: 15px;
 }
 
-/* Text */
+
 .info-card span,
 .rating-card span {
   font-size: 14px;
- // font-weight: 600;
+
   color: #444;
 }
 
@@ -1109,7 +1091,7 @@ h2 {
 
 .section-title {
   font-size: 36px;
-  // color: #f44336;
+ 
   color: #222;
   margin-bottom: 40px;
   animation: slideInDown 1s ease;
@@ -1179,10 +1161,11 @@ h2 {
   .testimonial-container {
     flex-direction: column;
     align-items: center;
+   
   }
 
   .testimonial-card {
-    width: 90%;
+    // width: 90%;
   }
 }
 .testimonial-heading {
@@ -1305,5 +1288,92 @@ h2 {
 
   .explore-card {
     width: 90%;
+  }
+}
+.info-reviews {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: white;
+  color: #333;
+  font-size: 14px;
+  flex-wrap: wrap;
+  align-items: stretch; 
+
+  .left-container,
+  .right-container {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .key-info,
+  .amenities-section {
+    flex-grow: 1;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .key-info-container,
+  .amenities-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 0.75rem;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin: 0;
+    }
+  }
+
+  .info-grid,
+  .amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .info-card,
+  .amenity-card {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+
+    img {
+      width: 24px;
+      height: 24px;
+      margin-right: 0.75rem;
+    }
+
+    span {
+      font-weight: bold;
+      margin-left: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .left-container,
+    .right-container {
+      width: 100%;
+    }
+
+    .info-grid,
+    .amenities-grid {
+      grid-template-columns: repeat(2, 1fr);
+
+    }
   }
 }

@@ -21,7 +21,7 @@ import artImg from "../../assets/art.png";
 import footerpreschool from "../../assets/footerpreschool.jpg";
 import preschoolimg from "../../assets/preschoolimg.avif";
 import preschoolimages from "../../assets/preschoolimages.jpg";
-import testimonialImg from '../../assets/testimonialimg.png'; 
+import testimonialImg from "../../assets/testimonialimg.png";
 
 import {
   FaPhoneAlt,
@@ -265,13 +265,11 @@ const Home = () => {
       </div>
 
       {/* Information & Reviews Section */}
-      <div
+      {/* <div
         className="info-reviews"
         style={{ color: "#333", background: "white", fontSize: "14px" }}
       >
         <div className="key-info">
-          <a></a>
-
           <div className="key-info-container">
             <img src={searchIcon} alt="Search Icon" className="key-icon" />
             <h2 className="key-information">Key Information</h2>
@@ -320,6 +318,64 @@ const Home = () => {
                 {text}
               </div>
             ))}
+          </div>
+        </div>
+      </div> */}
+
+      <div className="info-reviews">
+        {/* Left Container */}
+        <div className="left-container">
+          <div className="key-info">
+            <div className="key-info-container">
+              <img src={searchIcon} alt="Search Icon" className="key-icon" />
+              <h2 className="key-information">Key Information</h2>
+            </div>
+
+            <div className="info-grid">
+              {[
+                { image: cctvImg, text: "CCTV", value: "Yes" },
+                { image: daycareImg, text: "Day & Night Care", value: "Yes" },
+                { image: sportsImg, text: "Outdoor Sports", value: "Yes" },
+                { image: minAgeImg, text: "Minimum Age", value: "02 Years" },
+                { image: maxAgeImg, text: "Maximum Age", value: "06 Years" },
+                { image: mealsImg, text: "Meals Provided", value: "Yes" },
+              ].map(({ image, text, value }, index) => (
+                <div key={index} className="info-card">
+                  <img src={image} alt={text} className="icon-image" />
+                  {text} <span>{value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Right Container */}
+        <div className="right-container">
+          <div className="amenities-section">
+            <div className="amenities-header">
+              <img
+                src={amenitiesIcon}
+                alt="Amenities Icon"
+                className="amenities-icon"
+              />
+              <h2 className="amenities-title">Our Amenities</h2>
+            </div>
+
+            <div className="amenities-grid">
+              {[
+                { image: playgroundImg, text: "Outdoor Playground" },
+                { image: teacherImg, text: "Expert Teachers" },
+                { image: transportImg, text: "School Transport" },
+                { image: musicImg, text: "Music & Dance Room" },
+                { image: diningImg, text: "Healthy Snack & Dining Area" },
+                { image: artImg, text: "Art & Craft Zone" },
+              ].map(({ image, text }, index) => (
+                <div key={index} className="amenity-card">
+                  <img src={image} alt={text} className="amenity-icon" />
+                  {text}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
